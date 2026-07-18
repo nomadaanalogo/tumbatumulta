@@ -49,29 +49,41 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     }
 
     {
-      adsenseClientId && (
-        <script
-          is:inline
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-          crossorigin="anonymous"
-        />
-      )
-    }
+      (adsenseClientId || gaMeasurementId) && (
+        <script is:inline define:vars={{ adsenseClientId, gaMeasurementId }}>
+          function loadTrackingScripts() {
+            if (window.__trackingLoaded) return;
+            window.__trackingLoaded = true;
 
-    {
-      gaMeasurementId && (
-        <>
-          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
-          <script is:inline define:vars={{ gaMeasurementId }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
+            if (gaMeasurementId) {
+              const gaScript = document.createElement('script');
+              gaScript.async = true;
+              gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaMeasurementId;
+              document.head.appendChild(gaScript);
+
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function gtag() {
+                window.dataLayer.push(arguments);
+              };
+              window.gtag('js', new Date());
+              window.gtag('config', gaMeasurementId);
             }
-            gtag('js', new Date());
-            gtag('config', gaMeasurementId);
-          </script>
-        </>
+
+            if (adsenseClientId) {
+              const adsScript = document.createElement('script');
+              adsScript.async = true;
+              adsScript.src =
+                'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsenseClientId;
+              adsScript.crossOrigin = 'anonymous';
+              document.head.appendChild(adsScript);
+            }
+          }
+
+          if (localStorage.getItem('cookie-consent') === 'granted') {
+            loadTrackingScripts();
+          }
+          window.addEventListener('cookie-consent-granted', loadTrackingScripts);
+        </script>
       )
     }
   </head>

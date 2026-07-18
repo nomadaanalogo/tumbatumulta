@@ -7,37 +7,47 @@ import Icon from './Icon.astro';
   class="fixed inset-x-0 bottom-0 z-50 hidden border-t border-slate-200 bg-white/95 px-4 py-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95 sm:px-6"
 >
   <div class="mx-auto flex max-w-5xl flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-    <p class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-      <Icon name="lock" size={16} class="mt-0.5 shrink-0 text-slate-400" />
-      <span>
-        Usamos cookies propias y de terceros (Google Analytics y Google AdSense) para analizar el uso del
-        sitio y mostrar publicidad. Más información en nuestra
-        <a href="/privacidad/" class="text-blue-700 underline hover:no-underline dark:text-blue-400">
-          política de privacidad
-        </a>.
-      </span>
+    <p class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+      <Icon name="lock" size={16} class="shrink-0 text-slate-400" />
+      <span>Este sitio usa cookies.</span>
     </p>
-    <button
-      type="button"
-      id="cookie-notice-accept"
-      class="w-full shrink-0 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:w-auto"
-    >
-      Entendido
-    </button>
+    <div class="flex w-full gap-2 sm:w-auto">
+      <button
+        type="button"
+        id="cookie-notice-decline"
+        class="flex-1 rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-900 sm:flex-none"
+      >
+        No
+      </button>
+      <button
+        type="button"
+        id="cookie-notice-accept"
+        class="flex-1 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:flex-none"
+      >
+        Entendido
+      </button>
+    </div>
   </div>
 </div>
 
 <script>
-  const STORAGE_KEY = 'cookie-notice-dismissed';
+  const STORAGE_KEY = 'cookie-consent';
   const notice = document.getElementById('cookie-notice');
   const acceptButton = document.getElementById('cookie-notice-accept');
+  const declineButton = document.getElementById('cookie-notice-decline');
 
   if (notice && !localStorage.getItem(STORAGE_KEY)) {
     notice.classList.remove('hidden');
   }
 
   acceptButton?.addEventListener('click', () => {
-    localStorage.setItem(STORAGE_KEY, 'true');
+    localStorage.setItem(STORAGE_KEY, 'granted');
+    notice?.classList.add('hidden');
+    window.dispatchEvent(new Event('cookie-consent-granted'));
+  });
+
+  declineButton?.addEventListener('click', () => {
+    localStorage.setItem(STORAGE_KEY, 'denied');
     notice?.classList.add('hidden');
   });
 </script>
