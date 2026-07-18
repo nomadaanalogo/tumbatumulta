@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE_NAME } from '../../consts';
+
+const title = 'Términos de uso y aviso legal';
+const description =
+  'Condiciones de uso de TumbaTuMulta: contenido informativo, sin relación abogado-cliente, y límites de responsabilidad.';
+const lastUpdated = 'julio de 2026';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div class="flex items-center gap-3">
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+        <Icon name="scale" size={22} strokeWidth={1.8} />
+      </span>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Términos de uso y aviso legal
+      </h1>
+    </div>
+    <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Última actualización: {lastUpdated}.</p>
+
+    <div class="prose prose-slate mt-8 max-w-none dark:prose-invert prose-a:text-blue-700 dark:prose-a:text-blue-400">
+      <p>
+        Al usar {SITE_NAME} aceptas estos términos. Si no estás de acuerdo con alguno de ellos, la
+        recomendación es no usar el sitio y consultar directamente con un abogado o con el organismo de
+        tránsito competente.
+      </p>
+
+      <h2>1. Esto es contenido informativo, no asesoría legal individual</h2>
+      <p>
+        {SITE_NAME} es un sitio editorial que explica, en lenguaje accesible, normativa colombiana de tránsito
+        de carácter general (Ley 769 de 2002 y sus reformas, el CPACA, el Estatuto Tributario en lo aplicable
+        al cobro coactivo, entre otras). <strong>No es un despacho de abogados, no ejerce la abogacía, y nada
+        de lo publicado aquí constituye asesoría legal para tu caso particular.</strong> Usar este sitio no
+        crea una relación abogado-cliente entre tú y {SITE_NAME}, sus autores o colaboradores.
+      </p>
+
+      <h2>2. No garantizamos resultados</h2>
+      <p>
+        Los artículos describen argumentos y figuras legales que <em>suelen</em> ser relevantes en casos de
+        multas de tránsito (prescripción, caducidad, defectos de notificación, requisitos de fotomultas, entre
+        otros). Que un argumento exista en la ley no significa que aplique automáticamente a tu situación: el
+        resultado de cualquier trámite, recurso, derecho de petición o tutela depende de los hechos concretos
+        de tu caso y de cómo los valore la autoridad de tránsito o el juez competente.
+        <strong> No garantizamos que impugnar, alegar prescripción o presentar cualquier recurso vaya a
+        tener éxito.</strong>
+      </p>
+
+      <h2>3. La única excepción que señalamos con claridad: alcoholemia</h2>
+      <p>
+        Si tu comparendo es por embriaguez, alcoholemia o sustancias psicoactivas, los argumentos que cubre
+        este sitio no aplican de la misma forma. Ese tipo de infracción se basa en una prueba técnica directa y
+        puede tener consecuencias más allá de lo administrativo. En ese escenario, la recomendación explícita
+        del sitio es que consultes con un abogado, no que busques un defecto de forma.
+      </p>
+
+      <h2>4. La normativa cambia; verifica la vigencia</h2>
+      <p>
+        El derecho de tránsito colombiano se modifica con relativa frecuencia (leyes, resoluciones del
+        Ministerio de Transporte, jurisprudencia). Los artículos indican la fecha de su última actualización,
+        pero no podemos garantizar que reflejen cualquier cambio normativo posterior a esa fecha. Verifica
+        siempre la vigencia de un plazo o requisito específico antes de actuar con base en él, especialmente si
+        hay dinero, tu licencia o un proceso judicial en juego.
+      </p>
+
+      <h2>5. Sobre el prompt de "Analiza tu multa"</h2>
+      <p>
+        La página <a href="/analiza-tu-multa/">/analiza-tu-multa/</a> ofrece un texto para que lo copies en un
+        asistente de inteligencia artificial de un tercero (ChatGPT, Gemini, Claude u otro). {SITE_NAME} no
+        opera, controla ni es responsable de esas plataformas, de sus respuestas, ni de cómo procesan la
+        información que les compartas. La calidad y exactitud de esa respuesta depende del proveedor de IA que
+        elijas, no de nosotros.
+      </p>
+
+      <h2>6. Límite de responsabilidad</h2>
+      <p>
+        En la máxima medida permitida por la ley, {SITE_NAME} y sus autores no serán responsables por
+        decisiones que tomes con base en el contenido del sitio, ni por perjuicios, multas, sanciones,
+        intereses, embargos o cualquier consecuencia derivada de pagar, no pagar, impugnar o dejar de impugnar
+        una multa de tránsito. El contenido se ofrece "tal cual", sin garantías de exactitud, vigencia o
+        idoneidad para un propósito específico.
+      </p>
+
+      <h2>7. Contenido de terceros</h2>
+      <p>
+        Los artículos citan o enlazan normas, sentencias y fuentes oficiales o periodísticas externas. No
+        controlamos ese contenido ni respondemos por su exactitud, y su inclusión no implica respaldo. El sitio
+        también muestra publicidad de terceros (Google AdSense); esos anuncios no son contenido editorial ni
+        recomendaciones nuestras.
+      </p>
+
+      <h2>8. Cambios a estos términos</h2>
+      <p>
+        Podemos actualizar estos términos en cualquier momento; la versión vigente es la publicada en esta
+        página, con su fecha de última actualización.
+      </p>
+
+      <h2>9. Ley aplicable</h2>
+      <p>Estos términos se rigen por las leyes de la República de Colombia.</p>
+
+      <h2>Contacto</h2>
+      <p>
+        Para preguntas sobre estos términos, escríbenos a{' '}
+        <a href="mailto:contacto@tumbatumulta.co">contacto@tumbatumulta.co</a>. Para el tratamiento de datos
+        personales, consulta también la <a href="/privacidad/">política de privacidad</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

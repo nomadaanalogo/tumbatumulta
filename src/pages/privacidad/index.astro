@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE_NAME } from '../../consts';
+
+const title = 'Política de privacidad';
+const description =
+  'Qué información recoge TumbaTuMulta, cómo se usan las cookies de publicidad, y qué derechos tienes sobre tus datos personales.';
+const lastUpdated = 'julio de 2026';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div class="flex items-center gap-3">
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+        <Icon name="lock" size={22} strokeWidth={1.8} />
+      </span>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Política de privacidad
+      </h1>
+    </div>
+    <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Última actualización: {lastUpdated}.</p>
+
+    <div class="prose prose-slate mt-8 max-w-none dark:prose-invert prose-a:text-blue-700 dark:prose-a:text-blue-400">
+      <p>
+        {SITE_NAME} es un sitio de contenido informativo. No tiene sistema de registro, no pide crear una
+        cuenta, y no tiene formularios que recojan tus datos personales para prestarte un servicio. Aun así,
+        como todo sitio con publicidad, usa cookies y tecnologías similares, y esta página explica exactamente
+        para qué.
+      </p>
+
+      <h2>Qué datos recogemos directamente</h2>
+      <p>
+        Ninguno de forma identificable. No tenemos formularios de contacto, registro ni pagos en el sitio. No
+        recopilamos tu nombre, cédula, correo ni ningún dato que introduzcas en un asistente de IA externo —
+        esa conversación ocurre por completo fuera de {SITE_NAME}, en la plataforma que tú elijas (ChatGPT,
+        Gemini, Claude), y se rige por la política de privacidad de esa plataforma, no por la nuestra.
+      </p>
+
+      <h2>Cookies de publicidad (Google AdSense)</h2>
+      <p>
+        Este sitio muestra anuncios a través de <strong>Google AdSense</strong>. Google y sus socios
+        publicitarios pueden usar cookies u otras tecnologías similares para mostrar anuncios según tus visitas
+        a este sitio y a otros sitios en internet.
+      </p>
+      <ul>
+        <li>Puedes inhabilitar los anuncios personalizados en tu cuenta de Google desde <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.</li>
+        <li>También puedes gestionar las preferencias de publicidad de otros proveedores en <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">aboutads.info/choices</a>.</li>
+        <li>Puedes leer cómo Google usa la información de sitios que usan sus servicios en <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">policies.google.com/technologies/partner-sites</a>.</li>
+      </ul>
+
+      <h2>Visitantes desde la Unión Europea, Reino Unido o Suiza</h2>
+      <p>
+        Si visitas el sitio desde el Espacio Económico Europeo, el Reino Unido o Suiza, es posible que veas un
+        mensaje de consentimiento antes de que se muestren anuncios personalizados, conforme a las políticas de
+        Google para esas regiones. Puedes aceptar, rechazar o administrar tus opciones desde ese mismo mensaje.
+      </p>
+
+      <h2>Tus derechos sobre tus datos personales</h2>
+      <p>
+        Como usuario en Colombia, tienes derecho a conocer, actualizar, rectificar y solicitar la eliminación de
+        tus datos personales, conforme a la <strong>Ley 1581 de 2012</strong> (régimen general de protección de
+        datos personales, Habeas Data). Como este sitio no recoge datos personales identificables de forma
+        directa, la forma más efectiva de ejercer control sobre los datos que sí procesa la publicidad es a
+        través de los enlaces de Google mencionados arriba.
+      </p>
+
+      <h2>Enlaces a sitios externos</h2>
+      <p>
+        Los artículos citan fuentes oficiales (leyes, sentencias, entidades públicas) y en ocasiones medios de
+        prensa. Esos sitios tienen sus propias políticas de privacidad, independientes de la nuestra — no nos
+        hacemos responsables por su contenido ni por cómo manejan tus datos si haces clic en esos enlaces.
+      </p>
+
+      <h2>Cambios a esta política</h2>
+      <p>
+        Podemos actualizar esta política cuando cambien las prácticas del sitio o los requisitos de nuestros
+        proveedores de publicidad. La fecha de "última actualización" al inicio de esta página refleja la
+        versión vigente.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>
+        Si tienes preguntas sobre esta política, puedes escribirnos a{' '}
+        <a href="mailto:contacto@tumbatumulta.co">contacto@tumbatumulta.co</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
