@@ -7,10 +7,11 @@ interface Props {
 
 const { adSlot, format = 'auto', class: className = '' } = Astro.props;
 const client = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID;
+const hasRealSlot = Boolean(adSlot) && !adSlot.startsWith('REPLACE_WITH');
 ---
 
 {
-  client && (
+  client && hasRealSlot && (
     <div class={`ad-slot my-8 flex justify-center ${className}`}>
       <ins
         class="adsbygoogle"
