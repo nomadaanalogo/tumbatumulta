@@ -39,7 +39,7 @@ Si la autoridad no puede resolver a tiempo, debe avisarte **antes de que venza e
 
 Para que sea válida, una petición formal debe tener como mínimo:
 
-1. La autoridad o entidad a la que te diriges.
+1. La autoridad o entidad a la que te diriges (¿no sabes cuál es? revisa el [directorio de secretarías de tránsito de las principales ciudades](/blog/secretarias-de-transito-principales-ciudades-colombia/)).
 2. Tu nombre completo e identificación, con dirección física o electrónica para que te respondan.
 3. Qué estás pidiendo, de forma clara y concreta (por ejemplo: "solicito se declare la prescripción de la multa X" o "solicito copia del certificado de calibración del equipo Y").
 4. Las razones de tu solicitud (los hechos y el fundamento legal).

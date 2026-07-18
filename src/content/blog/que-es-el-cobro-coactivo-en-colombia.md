@@ -28,7 +28,7 @@ El cobro coactivo de multas de tránsito se rige principalmente por el **CPACA (
 
 ## Lo primero que deberías hacer si te notifican uno
 
-Antes de pagar o de pelear a ciegas, **pide copia completa del expediente**: el mandamiento de pago, el título ejecutivo, la constancia de que la resolución quedó en firme, y las constancias de notificación. Muchas veces ahí aparece el vicio (una notificación mal hecha, una prescripción no considerada) que te libera de pagar. Profundizamos esta estrategia, y qué tan real es el riesgo de embargo, en el artículo [qué pasa si no pagas una multa de tránsito](/blog/no-pagar-multa-transito-cobro-coactivo-embargo/).
+Antes de pagar o de pelear a ciegas, **pide copia completa del expediente**: el mandamiento de pago, el título ejecutivo, la constancia de que la resolución quedó en firme, y las constancias de notificación. Muchas veces ahí aparece el vicio (una notificación mal hecha, una prescripción no considerada) que te libera de pagar. Profundizamos esta estrategia, y qué tan real es el riesgo de embargo, en el artículo [qué pasa si no pagas una multa de tránsito](/blog/no-pagar-multa-transito-cobro-coactivo-embargo/). Si tu cobro coactivo es por una multa de hace varios años, revisa primero [tengo un cobro coactivo de hace 5 años, ¿qué hago?](/blog/cobro-coactivo-simit-multa-de-hace-5-anos/) — es probable que ya haya prescrito.
 
 ## Cobro coactivo no es lo mismo que...
 
