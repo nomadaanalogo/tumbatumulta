@@ -43,6 +43,11 @@ const { text, id = 'copy-box' } = Astro.props;
         setTimeout(() => {
           label.textContent = original;
         }, 2000);
+
+        (window as any).gtag?.('event', 'copy_prompt', {
+          event_category: 'engagement',
+          event_label: targetId,
+        });
       } catch {
         label.textContent = 'No se pudo copiar';
       }
