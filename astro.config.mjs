@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   // TODO: update to the real production domain before deploying.
-  site: 'https://tumbatumulta.com',
+  site: 'https://tumbatumulta.co',
   trailingSlash: 'always',
 
   vite: {

@@ -3,7 +3,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import { SITE_NAME } from '../../consts';
 
-const faqs = [
+const faqs: { question: string; answer: string; link?: { href: string; label: string } }[] = [
+  {
+    question: '¿Qué es el SIMIT?',
+    answer:
+      'El SIMIT (Sistema Integrado de Información sobre Multas y Sanciones por Infracciones de Tránsito) es la plataforma nacional donde se consultan y pagan los comparendos de tránsito en Colombia, por cédula o por placa. Se conecta con el RUNT: si tienes multas activas sin pagar en el SIMIT, el RUNT puede bloquearte trámites como renovar la licencia o traspasar un vehículo.',
+    link: { href: '/blog/simit-vs-runt-diferencias/', label: 'SIMIT vs. RUNT: qué son y cómo se conectan' },
+  },
+  {
+    question: '¿Qué es un cobro coactivo en Colombia?',
+    answer:
+      'Es el proceso administrativo con el que una entidad pública, incluida una autoridad de tránsito, cobra una deuda directamente, sin necesidad de demandarte ante un juez. Empieza con un mandamiento de pago, tienes 15 días hábiles para pagar o presentar excepciones, y solo después de eso podrían decretarse medidas como el embargo.',
+    link: { href: '/blog/que-es-el-cobro-coactivo-en-colombia/', label: 'Qué es el cobro coactivo en Colombia' },
+  },
+  {
+    question: '¿Cómo no pagar una multa de tránsito en Colombia?',
+    answer:
+      'La forma legítima no es "ignorarla", sino verificar si realmente estás obligado a pagarla: si ya prescribió (más de 3 años) o caducó (más de 1 año sin sanción en firme), si es una fotomulta sin señalización o calibración vigente, si la notificación fue defectuosa, o si no eras tú quien conducía. Esto no aplica igual si tu multa es por alcoholemia.',
+    link: { href: '/blog/no-pagues-tu-multa-de-transito/', label: 'No pagues tu multa sin hacer esto primero' },
+  },
+  {
+    question: '¿Cómo prescribe una multa de tránsito en Colombia?',
+    answer:
+      'Prescribe a los 3 años contados desde la fecha de la infracción, siempre que en ese tiempo no te hayan notificado válidamente un mandamiento de pago (eso interrumpe el plazo y empieza a correr uno nuevo). Es distinta de la caducidad, que es de 1 año y afecta la facultad de sancionarte, no de cobrarte.',
+    link: { href: '/blog/prescripcion-de-multas-de-transito/', label: 'Prescripción de multas de tránsito: plazos y cómo alegarla' },
+  },
+  {
+    question: '¿Qué tipos de multas de tránsito hay en Colombia?',
+    answer:
+      'Las más comunes son por exceso de velocidad y semáforo en rojo (casi siempre por fotomulta), mal parqueo, documentos vencidos (SOAT, tecnomecánica, licencia), uso del celular al conducir, no usar cinturón o casco, y embriaguez o alcoholemia. Cada tipo tiene argumentos de defensa distintos.',
+    link: { href: '/blog/tipos-de-multas-de-transito-en-colombia/', label: 'Tipos de multas de tránsito en Colombia' },
+  },
   {
     question: '¿De dónde sale la información legal de este sitio?',
     answer:
@@ -27,7 +57,8 @@ const faqs = [
   {
     question: '¿Qué es más importante, la prescripción o la caducidad?',
     answer:
-      'Son dos figuras distintas. La caducidad (1 año) afecta la facultad de la autoridad para imponer la sanción. La prescripción (3 años) afecta su facultad para cobrar la multa ya impuesta. Ambas pueden jugar a tu favor según en qué momento esté tu caso — lo explicamos con detalle en el artículo dedicado.',
+      'Son dos figuras distintas. La caducidad (1 año) afecta la facultad de la autoridad para imponer la sanción. La prescripción (3 años) afecta su facultad para cobrar la multa ya impuesta. Ambas pueden jugar a tu favor según en qué momento esté tu caso.',
+    link: { href: '/blog/caducidad-vs-prescripcion-multas-transito/', label: 'Caducidad vs. prescripción' },
   },
   {
     question: '¿Qué tan confiable es la recomendación que me da la IA en /analiza-tu-multa?',
@@ -38,7 +69,7 @@ const faqs = [
 
 const title = 'Preguntas frecuentes';
 const description =
-  'De dónde sale la información de TumbaTuMulta, por qué es gratis, y qué límites tiene esta guía sobre multas de tránsito en Colombia.';
+  'Qué es el SIMIT, qué es un cobro coactivo, cómo no pagar una multa de tránsito y cómo prescribe: respuestas directas, más de dónde sale la información de TumbaTuMulta.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -81,6 +112,15 @@ const jsonLd = {
               />
             </summary>
             <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{faq.answer}</p>
+            {faq.link && (
+              <a
+                href={faq.link.href}
+                class="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-700 hover:underline dark:text-blue-400"
+              >
+                {faq.link.label}
+                <Icon name="arrow-right" size={14} strokeWidth={2} />
+              </a>
+            )}
           </details>
         ))
       }

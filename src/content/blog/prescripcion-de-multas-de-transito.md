@@ -6,7 +6,7 @@ order: 2
 updatedDate: 2026-07-17
 ---
 
-Una de las preguntas que más se repite en los grupos de Facebook y en Google es alguna variación de: "¿las multas de tránsito prescriben?". La respuesta corta es **sí**, pero con condiciones que vale la pena conocer antes de asumir que ya no debes nada.
+**Una multa de tránsito en Colombia prescribe a los 3 años de ocurrida la infracción, siempre que la autoridad no haya notificado válidamente un mandamiento de pago dentro de ese plazo.** Es una de las preguntas que más se repite en los grupos de Facebook y en Google: "¿las multas de tránsito prescriben?". La respuesta corta es **sí**, pero con condiciones que vale la pena conocer antes de asumir que ya no debes nada.
 
 ## El plazo: tres años desde la infracción
 

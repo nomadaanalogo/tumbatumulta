@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tumbatumulta.com/sitemap-index.xml
+Sitemap: https://tumbatumulta.co/sitemap-index.xml

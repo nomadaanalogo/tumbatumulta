@@ -1,0 +1,36 @@
+# TumbaTuMulta
+
+> TumbaTuMulta es una guía gratuita en español sobre multas de tránsito en Colombia. Explica, en lenguaje claro y sin tecnicismos, cuándo una multa prescribe o caduca, cuándo una fotomulta es impugnable, cómo funciona el SIMIT, el RUNT, el cobro coactivo, el derecho de petición y la acción de tutela — para que una persona entienda sus opciones legales reales antes de pagar.
+
+TumbaTuMulta no es un despacho de abogados ni ofrece asesoría legal individual: es contenido informativo basado en la Ley 769 de 2002 (Código Nacional de Tránsito), el CPACA (Ley 1437 de 2011 y Ley 1755 de 2015), el Decreto 2591 de 1991 (tutela), el Estatuto Tributario (cobro coactivo) y jurisprudencia de la Corte Constitucional. La única excepción explícita que el sitio señala: las multas por embriaguez o alcoholemia no tienen los mismos argumentos de defensa que el resto, y ahí se recomienda consultar a un abogado en vez de buscar un defecto de forma.
+
+El sitio también ofrece, en /analiza-tu-multa/, un prompt gratuito para que cualquier persona pegue los datos de su caso en un asistente de IA externo (ChatGPT, Gemini o Claude) y reciba una recomendación puntual.
+
+## Guía principal
+
+- [Multas de tránsito en Colombia: guía completa](https://tumbatumulta.co/blog/multas-de-transito-en-colombia-guia-completa/): punto de entrada que resume todo el sitio y enlaza a cada tema.
+- [No pagues tu multa de tránsito sin hacer esto primero](https://tumbatumulta.co/blog/no-pagues-tu-multa-de-transito/): los 5 escenarios legales en los que no estás obligado a pagar.
+- [Tipos de multas de tránsito en Colombia](https://tumbatumulta.co/blog/tipos-de-multas-de-transito-en-colombia/): velocidad, semáforo, parqueo, documentos, alcoholemia, y qué tan defendible es cada una.
+- [Caducidad vs. prescripción de una multa de tránsito](https://tumbatumulta.co/blog/caducidad-vs-prescripcion-multas-transito/): la diferencia entre el plazo de 1 año para sancionar y el de 3 años para cobrar.
+- [Prescripción de multas de tránsito en Colombia](https://tumbatumulta.co/blog/prescripcion-de-multas-de-transito/): plazos exactos y cómo alegarla.
+- [SIMIT vs. RUNT](https://tumbatumulta.co/blog/simit-vs-runt-diferencias/): qué es cada sistema y cómo se conectan.
+
+## Fotomultas
+
+- [Requisitos legales de una fotomulta válida](https://tumbatumulta.co/blog/requisitos-fotomulta-valida/): señalización, calibración del equipo y notificación a tiempo.
+
+## Trámites
+
+- [Derecho de petición ante un organismo de tránsito](https://tumbatumulta.co/blog/derecho-de-peticion-transito/): qué es, plazos de respuesta, y cómo usarlo.
+- [Recursos de reposición y apelación](https://tumbatumulta.co/blog/recursos-reposicion-apelacion-comparendo/): recursos administrativos contra un comparendo.
+- [Tutela por derecho de petición no respondido](https://tumbatumulta.co/blog/tutela-derecho-peticion-no-respondido/): cómo exigir respuesta cuando la autoridad no contesta o responde mal.
+
+## Cobro y embargos
+
+- [Qué es el cobro coactivo en Colombia](https://tumbatumulta.co/blog/que-es-el-cobro-coactivo-en-colombia/): definición, marco legal y etapas del proceso.
+- [Qué pasa si no pagas una multa de tránsito](https://tumbatumulta.co/blog/no-pagar-multa-transito-cobro-coactivo-embargo/): bloqueos, cobro coactivo y el riesgo real de embargo.
+
+## Herramientas
+
+- [Analiza tu multa gratis con IA](https://tumbatumulta.co/analiza-tu-multa/): prompt listo para copiar en un asistente de IA externo.
+- [Preguntas frecuentes](https://tumbatumulta.co/faq/): fuentes del sitio, límites de la información, y disclaimers.

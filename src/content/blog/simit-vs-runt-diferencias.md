@@ -6,7 +6,7 @@ order: 4
 updatedDate: 2026-07-17
 ---
 
-Si alguna vez intentaste renovar tu licencia o traspasar un vehículo y te salió un bloqueo inesperado, probablemente escuchaste estos dos nombres: **SIMIT** y **RUNT**. Se mencionan casi siempre juntos, pero son sistemas distintos con funciones distintas.
+**El SIMIT es el sistema nacional donde se consultan y pagan las multas de tránsito en Colombia; el RUNT es el registro de vehículos y licencias, que se bloquea cuando el SIMIT reporta multas sin pagar.** Si alguna vez intentaste renovar tu licencia o traspasar un vehículo y te salió un bloqueo inesperado, probablemente escuchaste estos dos nombres juntos — pero son sistemas distintos, con funciones distintas.
 
 ## Qué es el SIMIT
 
