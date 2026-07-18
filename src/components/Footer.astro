@@ -1,0 +1,35 @@
+---
+import { SITE_NAME, SHORT_DISCLAIMER } from '../consts';
+import Icon from './Icon.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
+  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <p class="flex max-w-3xl gap-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+      <Icon name="alert-triangle" size={18} class="mt-0.5 shrink-0 text-amber-500" />
+      <span><strong class="text-slate-800 dark:text-slate-200">Aviso legal:</strong> {SHORT_DISCLAIMER}</span>
+    </p>
+
+    <div class="mt-6 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {year} {SITE_NAME}. Contenido informativo, no reemplaza asesoría legal.</p>
+      <nav class="flex gap-4">
+        <a href="/blog/" class="inline-flex items-center gap-1.5 hover:text-blue-700 dark:hover:text-blue-400">
+          <Icon name="document" size={16} />
+          Guía
+        </a>
+        <a
+          href="/analiza-tu-multa/"
+          class="inline-flex items-center gap-1.5 hover:text-blue-700 dark:hover:text-blue-400"
+        >
+          <Icon name="sparkles" size={16} />
+          Analiza tu multa
+        </a>
+        <a href="/faq/" class="inline-flex items-center gap-1.5 hover:text-blue-700 dark:hover:text-blue-400">
+          <Icon name="question" size={16} />
+          FAQ
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>

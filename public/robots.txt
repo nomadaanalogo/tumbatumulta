@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tumbatumulta.com/sitemap-index.xml

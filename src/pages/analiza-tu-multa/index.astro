@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CopyBox from '../../components/CopyBox.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import Icon from '../../components/Icon.astro';
+import AiIllustration from '../../components/illustrations/AiIllustration.astro';
+import { AI_PROMPT } from '../../data/ai-prompt';
+import { AD_SLOTS } from '../../consts';
+
+const title = 'Analiza tu multa gratis con IA';
+const description =
+  'Copia este prompt en ChatGPT, Gemini o Claude junto con tu caso o el pantallazo del SIMIT y recibe una orientación honesta sobre prescripción, caducidad e impugnación.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+    <div class="grid items-center gap-10 lg:grid-cols-2">
+      <div>
+        <p class="inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-400">
+          <Icon name="sparkles" size={16} strokeWidth={2} />
+          100% gratis
+        </p>
+        <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Analiza tu multa gratis, con la IA que ya tienes a mano
+        </h1>
+        <p class="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+          TumbaTuMulta no tiene un chat propio ni cobra por el análisis. En su lugar, preparamos un prompt
+          completo que puedes copiar y pegar en <strong>ChatGPT, Gemini o Claude</strong> junto con la
+          descripción de tu caso o una foto de tu pantallazo del SIMIT. La misma IA hace el trabajo, gratis.
+        </p>
+      </div>
+
+      <AiIllustration class="w-full" />
+    </div>
+
+    <ol class="mt-10 max-w-3xl space-y-4 text-slate-700 dark:text-slate-300">
+      <li class="flex gap-3">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">1</span>
+        <span>Copia el prompt de abajo con el botón "Copiar prompt".</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">2</span>
+        <span>Pégalo en ChatGPT, Gemini, Claude o el asistente de IA que prefieras.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">3</span>
+        <span>
+          Agrega tu caso al final: la fecha de la infracción, el tipo de comparendo, y si tienes una foto del
+          pantallazo del SIMIT, adjúntala en el chat.
+        </span>
+      </li>
+      <li class="flex gap-3">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">4</span>
+        <span>Lee la recomendación y, si necesitas más contexto legal, revisa los artículos de nuestra guía.</span>
+      </li>
+    </ol>
+
+    <div class="mt-10 max-w-3xl">
+      <CopyBox id="ai-prompt" text={AI_PROMPT} />
+    </div>
+
+    <AdSlot adSlot={AD_SLOTS.analizaTuMulta} class="my-10" />
+
+    <div class="mt-10 flex max-w-3xl gap-3 rounded-xl border border-amber-300 bg-amber-50 p-6 dark:border-amber-800 dark:bg-amber-950/40">
+      <Icon name="alert-triangle" size={22} class="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
+      <div>
+        <h2 class="font-bold text-slate-900 dark:text-white">Antes de empezar, ten en cuenta:</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+          <li>
+            Si tu multa es por <strong>embriaguez o alcoholemia</strong>, este análisis no te va a servir de
+            mucho: ese tipo de infracción no tiene los mismos argumentos de defensa y lo más responsable es
+            hablar con un abogado directamente.
+          </li>
+          <li>
+            Esto es orientación informativa, no una asesoría legal personalizada. La IA puede equivocarse o no
+            conocer un detalle normativo específico de tu ciudad — el prompt le pide ser honesta sobre eso, pero
+            confírmalo siempre en el organismo de tránsito o con un abogado si el caso es de valor alto.
+          </li>
+          <li>
+            Nunca subas tu cédula completa ni información sensible a una IA si no es necesario para el análisis.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

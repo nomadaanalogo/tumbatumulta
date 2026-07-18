@@ -1,0 +1,67 @@
+---
+import { SITE_NAME, NAV_LINKS } from '../consts';
+import Icon from './Icon.astro';
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="/" class="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white">
+        <Icon name="scale" size={20} strokeWidth={2} />
+      </span>
+      {SITE_NAME}
+    </a>
+
+    <nav class="hidden gap-6 text-sm font-medium sm:flex">
+      {
+        NAV_LINKS.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'transition-colors hover:text-blue-700 dark:hover:text-blue-400',
+              isActive(link.href)
+                ? 'text-blue-700 dark:text-blue-400'
+                : 'text-slate-600 dark:text-slate-300',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href="/analiza-tu-multa/"
+      class="hidden items-center gap-1.5 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:inline-flex"
+    >
+      <Icon name="sparkles" size={16} strokeWidth={2} />
+      Analiza tu multa
+    </a>
+
+    <details class="sm:hidden">
+      <summary class="flex list-none items-center gap-1.5 rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 dark:border-slate-700 dark:text-slate-200">
+        <Icon name="menu" size={18} strokeWidth={2} />
+        Menú
+      </summary>
+      <nav class="absolute left-0 right-0 flex flex-col gap-1 border-b border-slate-200 bg-white px-4 py-3 shadow-lg dark:border-slate-800 dark:bg-slate-950">
+        {
+          NAV_LINKS.map((link) => (
+            <a
+              href={link.href}
+              class="rounded px-2 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-900"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>

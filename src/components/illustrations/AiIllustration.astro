@@ -1,0 +1,60 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<div
+  class={`rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-6 dark:border-slate-700 dark:from-slate-900 dark:to-slate-900 ${className}`}
+>
+  <svg
+    viewBox="0 0 400 300"
+    class="h-auto w-full"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Ilustración de un comparendo siendo pegado en un chat de inteligencia artificial que responde con una recomendación"
+  >
+    <!-- decorative sparkles -->
+    <path d="M330 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#f59e0b" opacity="0.85" />
+    <path d="M355 90l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#93c5fd" />
+    <circle cx="30" cy="220" r="5" fill="#93c5fd" opacity="0.6" />
+
+    <!-- laptop frame -->
+    <rect x="70" y="28" width="260" height="200" rx="18" fill="#0f172a" />
+    <rect x="86" y="44" width="228" height="168" rx="8" fill="#eff6ff" />
+    <rect x="150" y="228" width="100" height="10" rx="4" fill="#0f172a" />
+    <rect x="130" y="238" width="140" height="8" rx="4" fill="#0f172a" />
+
+    <!-- user bubble -->
+    <rect x="176" y="62" width="118" height="34" rx="12" fill="#2563eb" />
+    <rect x="192" y="72" width="64" height="6" rx="3" fill="#bfdbfe" />
+    <rect x="192" y="84" width="42" height="6" rx="3" fill="#bfdbfe" />
+
+    <!-- AI response bubble -->
+    <rect x="104" y="106" width="164" height="90" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+    <path d="M122 120l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z" fill="#f59e0b" />
+    <rect x="140" y="119" width="112" height="7" rx="3.5" fill="#e2e8f0" />
+    <rect x="120" y="136" width="132" height="7" rx="3.5" fill="#e2e8f0" />
+    <rect x="120" y="153" width="104" height="7" rx="3.5" fill="#e2e8f0" />
+    <rect x="120" y="170" width="82" height="7" rx="3.5" fill="#dbeafe" />
+
+    <!-- ticket card outside, with arrow into the chat -->
+    <g transform="translate(6 118)">
+      <rect x="0" y="0" width="52" height="66" rx="7" fill="#ffffff" stroke="#f59e0b" stroke-width="3" />
+      <rect x="9" y="11" width="34" height="7" rx="3.5" fill="#fde68a" />
+      <rect x="9" y="25" width="26" height="5" rx="2.5" fill="#e2e8f0" />
+      <rect x="9" y="35" width="30" height="5" rx="2.5" fill="#e2e8f0" />
+      <rect x="9" y="45" width="20" height="5" rx="2.5" fill="#e2e8f0" />
+    </g>
+    <path d="M64 152 h20" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" />
+    <polyline
+      points="78 144 92 152 78 160"
+      stroke="#94a3b8"
+      stroke-width="3"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>

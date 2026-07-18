@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  text: string;
+  id?: string;
+}
+
+const { text, id = 'copy-box' } = Astro.props;
+---
+
+<div class="not-prose overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-900">
+  <div class="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-100 px-4 py-2 dark:border-slate-700 dark:bg-slate-800">
+    <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+      <Icon name="sparkles" size={14} />
+      Prompt para tu asistente de IA
+    </span>
+    <button
+      type="button"
+      data-copy-target={id}
+      class="copy-btn inline-flex shrink-0 items-center gap-1.5 rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700"
+    >
+      <Icon name="copy" size={14} strokeWidth={2} class="copy-btn-icon" />
+      <span class="copy-btn-label">Copiar prompt</span>
+    </button>
+  </div>
+  <pre id={id} class="max-h-[32rem] overflow-y-auto whitespace-pre-wrap break-words p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{text}</pre>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((button) => {
+    const label = button.querySelector<HTMLSpanElement>('.copy-btn-label');
+    button.addEventListener('click', async () => {
+      const targetId = button.dataset.copyTarget;
+      if (!targetId || !label) return;
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      try {
+        await navigator.clipboard.writeText(target.textContent ?? '');
+        const original = label.textContent;
+        label.textContent = '¡Copiado!';
+        setTimeout(() => {
+          label.textContent = original;
+        }, 2000);
+      } catch {
+        label.textContent = 'No se pudo copiar';
+      }
+    });
+  });
+</script>

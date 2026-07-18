@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE_NAME } from '../../consts';
+
+const faqs = [
+  {
+    question: '¿De dónde sale la información legal de este sitio?',
+    answer:
+      'De la Ley 769 de 2002 (Código Nacional de Tránsito) y sus reformas, el CPACA (Ley 1437 de 2011 y Ley 1755 de 2015), el Decreto 2591 de 1991 sobre tutela, el Estatuto Tributario (en lo aplicable al cobro coactivo), y jurisprudencia de la Corte Constitucional, entre otras fuentes públicas. Cada artículo enlaza o menciona la norma de la que parte.',
+  },
+  {
+    question: '¿TumbaTuMulta es un abogado o reemplaza una asesoría legal?',
+    answer:
+      'No. TumbaTuMulta es un sitio de contenido informativo. No brinda asesoría legal individual ni representa a nadie ante ninguna autoridad. Para casos de alto valor económico, riesgo de perder la licencia, o procesos judiciales ya iniciados, recomendamos siempre confirmar con un abogado en derecho de tránsito o administrativo.',
+  },
+  {
+    question: '¿Por qué el sitio no cobra nada?',
+    answer:
+      'El sitio se sostiene con publicidad (Google AdSense), no con pagos de los usuarios. El análisis de tu caso lo haces gratis copiando un prompt preparado por nosotros en un asistente de IA que ya uses (ChatGPT, Gemini o Claude).',
+  },
+  {
+    question: '¿Todas las multas de tránsito se pueden impugnar?',
+    answer:
+      'No todas, y hay que ser honestos sobre eso. Las multas por embriaguez o alcoholemia son la excepción más clara: se basan en una prueba técnica directa y no tienen los mismos argumentos de forma que cubrimos en esta guía (notificación tardía, falta de señalización, prescripción, etc.). Fuera de ese caso, vale la pena revisar fechas, notificaciones y requisitos técnicos antes de pagar.',
+  },
+  {
+    question: '¿Qué es más importante, la prescripción o la caducidad?',
+    answer:
+      'Son dos figuras distintas. La caducidad (1 año) afecta la facultad de la autoridad para imponer la sanción. La prescripción (3 años) afecta su facultad para cobrar la multa ya impuesta. Ambas pueden jugar a tu favor según en qué momento esté tu caso — lo explicamos con detalle en el artículo dedicado.',
+  },
+  {
+    question: '¿Qué tan confiable es la recomendación que me da la IA en /analiza-tu-multa?',
+    answer:
+      'El prompt que preparamos le pide expresamente a la IA que nunca invente artículos, cifras o sentencias, y que te diga cuándo algo depende de tu ciudad o de tu caso concreto. Aun así, es una orientación general: para decisiones de alto impacto, confírmalo con el organismo de tránsito o un abogado.',
+  },
+];
+
+const title = 'Preguntas frecuentes';
+const description =
+  'De dónde sale la información de TumbaTuMulta, por qué es gratis, y qué límites tiene esta guía sobre multas de tránsito en Colombia.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div class="flex items-center gap-3">
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+        <Icon name="question" size={22} strokeWidth={1.8} />
+      </span>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Preguntas frecuentes
+      </h1>
+    </div>
+    <p class="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+      Sobre {SITE_NAME}, nuestras fuentes y los límites honestos de esta guía.
+    </p>
+
+    <div class="mt-10 space-y-4">
+      {
+        faqs.map((faq) => (
+          <details class="group rounded-lg border border-slate-200 p-5 dark:border-slate-800">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-semibold text-slate-900 marker:content-none dark:text-white">
+              {faq.question}
+              <Icon
+                name="chevron-right"
+                size={18}
+                class="shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-90"
+              />
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{faq.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

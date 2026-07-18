@@ -1,0 +1,72 @@
+---
+export type IconName =
+  | 'scale'
+  | 'clock'
+  | 'camera'
+  | 'document'
+  | 'shield-check'
+  | 'search'
+  | 'sparkles'
+  | 'check-circle'
+  | 'alert-triangle'
+  | 'chevron-right'
+  | 'copy'
+  | 'menu'
+  | 'mail'
+  | 'lock'
+  | 'megaphone'
+  | 'question'
+  | 'arrow-right';
+
+const ICONS: Record<IconName, string> = {
+  scale:
+    '<line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-3.2 6.5a3.2 3.2 0 0 0 6.4 0L5 7z"/><path d="M19 7l-3.2 6.5a3.2 3.2 0 0 0 6.4 0L19 7z"/><line x1="8" y1="21" x2="16" y2="21"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/>',
+  camera:
+    '<path d="M4 8a2 2 0 0 1 2-2h1.2l.9-1.5A2 2 0 0 1 9.8 3.5h4.4a2 2 0 0 1 1.7 1L17 6h1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><circle cx="12" cy="13" r="3.5"/>',
+  document:
+    '<path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><polyline points="14 3 14 7 18 7"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/><line x1="8.5" y1="9" x2="11" y2="9"/>',
+  'shield-check':
+    '<path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><polyline points="9 12 11.3 14.3 15.3 9.5"/>',
+  search: '<circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/>',
+  sparkles:
+    '<path d="M12 3l1.3 3.9L17 8l-3.7 1.3L12 13l-1.3-3.7L7 8l3.7-1.1L12 3z"/><path d="M19 14l.6 1.7 1.9.7-1.9.7L19 19l-.6-1.9-1.9-.7 1.9-.7L19 14z"/><path d="M5 15l.6 1.5 1.6.6-1.6.6L5 19.5l-.6-1.7-1.6-.6 1.6-.6L5 15z"/>',
+  'check-circle': '<circle cx="12" cy="12" r="9"/><polyline points="8 12.5 11 15.5 16 9"/>',
+  'alert-triangle':
+    '<path d="M12 3.5L2.3 20h19.4L12 3.5z"/><line x1="12" y1="10" x2="12" y2="14.5"/><circle cx="12" cy="17.2" r="0.9" fill="currentColor" stroke="none"/>',
+  'chevron-right': '<polyline points="9 6 15 12 9 18"/>',
+  copy: '<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-8A1.5 1.5 0 0 0 5 5.5v10A1.5 1.5 0 0 0 6.5 17H8"/>',
+  menu: '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/>',
+  lock: '<rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+  megaphone:
+    '<path d="M3 10.2v3.6a1 1 0 0 0 1 1h1.6l6 3V6.2l-6 3H4a1 1 0 0 0-1 1z"/><path d="M13.6 8.2a4 4 0 0 1 0 7.6"/><path d="M16.6 5.5a8 8 0 0 1 0 13"/>',
+  question:
+    '<circle cx="12" cy="12" r="9"/><path d="M9.3 9.2a2.7 2.7 0 1 1 3.7 2.5c-.8.4-1.2.9-1.2 1.9"/><circle cx="12" cy="17.2" r="0.9" fill="currentColor" stroke="none"/>',
+  'arrow-right': '<line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>',
+};
+
+interface Props {
+  name: IconName;
+  size?: number;
+  class?: string;
+  strokeWidth?: number;
+}
+
+const { name, size = 24, class: className = '', strokeWidth = 1.6 } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width={strokeWidth}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={className}
+  aria-hidden="true"
+  set:html={ICONS[name]}
+/>

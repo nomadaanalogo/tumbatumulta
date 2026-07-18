@@ -1,0 +1,3 @@
+# Pega aquí la línea real que te da Google AdSense una vez tu cuenta esté aprobada.
+# Tiene este formato (reemplaza pub-0000000000000000 por tu client ID real):
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
