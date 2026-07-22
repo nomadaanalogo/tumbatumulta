@@ -1,12 +1,14 @@
 ---
-title: "Cómo tumbar una multa de tránsito en Colombia: guía rápida y fácil"
-description: "El proceso paso a paso para revisar si puedes tumbar tu multa de tránsito en Colombia: qué consultar primero, qué argumentos existen, y cuándo el proceso deja de ser rápido."
+title: "Cómo tumbar o anular una multa de tránsito en Colombia: guía rápida y fácil"
+description: "El proceso paso a paso para revisar si puedes tumbar o anular tu multa de tránsito en Colombia: qué consultar primero, qué argumentos existen, y cuándo el proceso deja de ser rápido."
 category: "Conceptos clave"
 order: -0.8
 updatedDate: 2026-07-18
 ---
 
-Vamos directo al grano: **"tumbar una multa" no significa un truco secreto — significa revisar, con las fechas y documentos en la mano, si la ley te da la razón para no pagarla.** Cuando aplica, el proceso puede ser rápido de verdad. Cuando no aplica, es mejor saberlo pronto que perder tiempo. Aquí está el camino más corto para averiguarlo.
+Vamos directo al grano: **"tumbar" o "anular" una multa no significa un truco secreto — significa revisar, con las fechas y documentos en la mano, si la ley te da la razón para no pagarla.** Cuando aplica, el proceso puede ser rápido de verdad. Cuando no aplica, es mejor saberlo pronto que perder tiempo. Aquí está el camino más corto para averiguarlo.
+
+**Un matiz rápido**: si lo que buscas es el trámite formal de recurrir la decisión dentro del proceso (lo que técnicamente se llama **impugnar**), tenemos un artículo específico para eso: [cómo impugnar una multa de tránsito](/blog/recursos-reposicion-apelacion-comparendo/). Esta guía es el mapa general para saber si tienes argumento para anularla, sea cual sea la vía.
 
 ## Paso 1: consulta tu multa en el SIMIT
 

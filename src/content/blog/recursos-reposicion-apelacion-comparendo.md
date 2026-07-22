@@ -1,12 +1,12 @@
 ---
-title: "Recursos de reposición y apelación contra un comparendo de tránsito"
-description: "Qué son los recursos de reposición y apelación, cuándo procede cada uno, y por qué los plazos varían según tu organismo de tránsito."
+title: "Cómo impugnar una multa de tránsito en Colombia: recursos de reposición y apelación"
+description: "Cómo impugnar un comparendo de tránsito en Colombia mediante los recursos de reposición y apelación: cuándo procede cada uno y por qué los plazos varían según tu organismo de tránsito."
 category: "Trámites"
 order: 7
-updatedDate: 2026-07-17
+updatedDate: 2026-07-18
 ---
 
-Cuando el organismo de tránsito toma una decisión sobre tu comparendo (por ejemplo, confirmando la sanción), no es la última palabra automáticamente. Dentro del proceso existen recursos administrativos para pedir que se revise esa decisión, antes de tener que acudir a un juez.
+**Impugnar una multa de tránsito en Colombia significa presentar, dentro del proceso contravencional, un recurso de reposición o de apelación pidiendo que se revise la decisión que confirmó tu comparendo — antes de tener que acudir a un juez.** Cuando el organismo de tránsito toma esa decisión, no es la última palabra automáticamente. Aquí te explicamos cómo funciona cada recurso y, sobre todo, los plazos que no te puedes saltar.
 
 ## Los dos recursos disponibles
 
