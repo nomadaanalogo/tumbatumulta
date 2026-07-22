@@ -61,19 +61,19 @@ const steps: { icon: IconName; title: string; description: string }[] = [
     icon: 'search',
     title: '1. Entiende tu caso',
     description:
-      'Lee los artículos relevantes a tu situación: fecha del comparendo, tipo de infracción, si te notificaron o no.',
+      'Lee los artículos relevantes a tu situación: <strong>fecha del comparendo</strong>, tipo de infracción, si te notificaron o no.',
   },
   {
     icon: 'robot',
     title: '2. Analiza tu multa con IA',
     description:
-      'Usa nuestro prompt gratuito en ChatGPT, Gemini o Claude para obtener una recomendación puntual sobre tu caso.',
+      'Usa nuestro <strong>prompt gratuito</strong> en ChatGPT, Gemini o Claude para obtener una recomendación puntual sobre tu caso.',
   },
   {
     icon: 'check-circle',
     title: '3. Actúa a tiempo',
     description:
-      'Presenta un derecho de petición, una excepción o un recurso dentro de los plazos legales — perderlos es lo que más le cuesta a la gente.',
+      'Presenta un derecho de petición, una excepción o un recurso <strong>dentro de los plazos legales</strong> — perderlos es lo que más le cuesta a la gente.',
   },
 ];
 
@@ -94,9 +94,10 @@ const description =
           Antes de pagar tu multa, entiende tus opciones.
         </h1>
         <p class="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-          Muchas multas de tránsito en Colombia tienen defectos que las hacen impugnables: notificaciones
-          tardías, fotomultas sin señalización o sin calibración vigente, comparendos ya prescritos o caducados.
-          Te explicamos, en lenguaje claro, qué dice realmente la ley antes de que saques la billetera.
+          Muchas multas de tránsito en Colombia tienen <strong>defectos que las hacen impugnables</strong>:
+          notificaciones tardías, fotomultas sin señalización o sin calibración vigente, comparendos ya
+          <strong>prescritos o caducados</strong>. Te explicamos, en lenguaje claro, qué dice realmente la ley
+          <strong>antes de que saques la billetera</strong>.
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -123,11 +124,10 @@ const description =
     <div class="mt-10 flex max-w-3xl gap-3 rounded-xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
       <Icon name="alert-triangle" size={22} class="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
       <p class="text-sm leading-relaxed text-amber-900 dark:text-amber-200">
-        <strong>Una excepción honesta:</strong> si tu comparendo es por embriaguez o niveles de alcohol/sustancias
-        psicoactivas (alcoholemia), esta guía no aplica igual. Ese tipo de infracción tiene una prueba técnica
-        directa (la prueba de alcoholemia) y consecuencias que van más allá de una multa administrativa —
-        no es un caso donde recomendemos buscar defectos de forma para no pagar. Si es tu situación, consulta
-        directamente con un abogado penalista/de tránsito.
+        <strong>Una excepción honesta:</strong> si tu comparendo es por <strong>embriaguez o alcoholemia</strong>,
+        esta guía no aplica igual. Ese tipo de infracción tiene una <strong>prueba técnica directa</strong> y
+        consecuencias que van más allá de una multa administrativa — no es un caso donde recomendemos buscar
+        defectos de forma para no pagar. Si es tu situación, <strong>consulta directamente con un abogado</strong>.
       </p>
     </div>
   </section>
@@ -179,7 +179,7 @@ const description =
               <Icon name={step.icon} size={20} strokeWidth={1.8} />
             </span>
             <h3 class="mt-4 font-semibold text-slate-900 dark:text-white">{step.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{step.description}</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400" set:html={step.description} />
           </div>
         ))
       }
@@ -191,7 +191,8 @@ const description =
       </span>
       <h2 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">¿Ya tienes el pantallazo del SIMIT a la mano?</h2>
       <p class="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-        En dos minutos puedes tener una primera orientación gratuita sobre qué hacer con tu multa.
+        En <strong>dos minutos</strong> puedes tener una primera orientación <strong>gratuita</strong> sobre qué
+        hacer con tu multa.
       </p>
       <a
         href="/analiza-tu-multa/"
