@@ -6,7 +6,7 @@ order: 6.3
 updatedDate: 2026-07-17
 ---
 
-Si te acaba de aparecer un cobro coactivo en el SIMIT por una multa de hace **5, 6, 8 o incluso más años**, la primera reacción de casi todo el mundo es de pánico. La buena noticia: en la mayoría de estos casos, el tiempo juega a tu favor. Vamos directo al punto.
+Si te acaba de aparecer un cobro coactivo en el SIMIT por una multa de hace **5, 6, 8 o incluso más años**, la primera reacción de casi todo el mundo es de **pánico**. La buena noticia: en la mayoría de estos casos, **el tiempo juega a tu favor**. Vamos directo al punto.
 
 ## La regla que probablemente ya te salva: 3 años
 
@@ -16,11 +16,11 @@ Lo explicamos con detalle, incluyendo qué interrumpe el plazo, en [prescripció
 
 ## Por qué "hace 5 años" no siempre significa "ya prescribió"
 
-Aquí está el matiz que hay que revisar con cuidado: si en algún momento dentro de esos años te notificaron **válidamente** un mandamiento de pago, el plazo se interrumpió y empezó a correr de nuevo desde esa fecha. Por eso la pregunta clave no es solo "¿cuánto tiempo ha pasado desde la infracción?", sino:
+Aquí está el matiz que hay que revisar con cuidado: si en algún momento dentro de esos años te notificaron **válidamente** un mandamiento de pago, el plazo **se interrumpió** y empezó a correr de nuevo desde esa fecha. Por eso la pregunta clave no es solo "¿cuánto tiempo ha pasado desde la infracción?", sino:
 
-- ¿Me notificaron alguna vez un mandamiento de pago?
-- Si sí, ¿cuándo exactamente, y a qué dirección?
-- ¿Esa notificación fue válida (llegó a mi dirección real, con las formalidades correctas) o fue defectuosa?
+- ¿Me notificaron **alguna vez** un mandamiento de pago?
+- Si sí, ¿**cuándo exactamente**, y a qué dirección?
+- ¿Esa notificación fue **válida** (llegó a mi dirección real, con las formalidades correctas) o fue **defectuosa**?
 
 Si el cobro coactivo que te llegó **ahora** es la primera notificación real que recibes en todo ese tiempo, el argumento de prescripción es fuerte. Si hubo una notificación válida hace, digamos, 2 años, el conteo se reinició y el análisis cambia.
 

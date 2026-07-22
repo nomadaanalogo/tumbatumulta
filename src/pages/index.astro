@@ -64,7 +64,7 @@ const steps: { icon: IconName; title: string; description: string }[] = [
       'Lee los artículos relevantes a tu situación: fecha del comparendo, tipo de infracción, si te notificaron o no.',
   },
   {
-    icon: 'sparkles',
+    icon: 'robot',
     title: '2. Analiza tu multa con IA',
     description:
       'Usa nuestro prompt gratuito en ChatGPT, Gemini o Claude para obtener una recomendación puntual sobre tu caso.',
@@ -102,9 +102,9 @@ const description =
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="/analiza-tu-multa/"
-            class="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            class="inline-flex items-center justify-center gap-2 rounded-md bg-green-600 px-6 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-green-700"
           >
-            <Icon name="sparkles" size={18} strokeWidth={2} />
+            <Icon name="robot" size={18} strokeWidth={2} />
             Analiza tu multa gratis con IA
           </a>
           <a
@@ -170,7 +170,12 @@ const description =
       {
         steps.map((step) => (
           <div>
-            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-white">
+            <span
+              class:list={[
+                'flex h-11 w-11 items-center justify-center rounded-full text-white',
+                step.icon === 'robot' ? 'bg-green-600' : 'bg-blue-600',
+              ]}
+            >
               <Icon name={step.icon} size={20} strokeWidth={1.8} />
             </span>
             <h3 class="mt-4 font-semibold text-slate-900 dark:text-white">{step.title}</h3>
@@ -180,9 +185,9 @@ const description =
       }
     </div>
 
-    <div class="mt-12 rounded-xl border border-blue-200 bg-blue-50 p-8 text-center dark:border-blue-900 dark:bg-blue-950/40">
-      <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white">
-        <Icon name="megaphone" size={22} strokeWidth={1.8} />
+    <div class="mt-12 rounded-xl border border-green-200 bg-green-50 p-8 text-center dark:border-green-900 dark:bg-green-950/30">
+      <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white">
+        <Icon name="robot" size={22} strokeWidth={1.8} />
       </span>
       <h2 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">¿Ya tienes el pantallazo del SIMIT a la mano?</h2>
       <p class="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-slate-700 dark:text-slate-300">
@@ -190,7 +195,7 @@ const description =
       </p>
       <a
         href="/analiza-tu-multa/"
-        class="mt-5 inline-flex items-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        class="mt-5 inline-flex items-center gap-2 rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-700"
       >
         Analiza tu multa ahora
         <Icon name="arrow-right" size={16} strokeWidth={2} />

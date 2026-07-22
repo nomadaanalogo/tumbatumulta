@@ -7,10 +7,10 @@ interface Props {
 const { class: className = '' } = Astro.props;
 ---
 
-<div class={`not-prose my-10 rounded-xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-900 dark:bg-blue-950/40 ${className}`}>
+<div class={`not-prose my-10 rounded-xl border border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950/30 ${className}`}>
   <div class="flex items-start gap-3">
-    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
-      <Icon name="sparkles" size={20} strokeWidth={2} />
+    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+      <Icon name="robot" size={20} strokeWidth={2} />
     </span>
     <div>
       <h3 class="text-lg font-bold text-slate-900 dark:text-white">¿Quieres saber qué opciones tienes en tu caso concreto?</h3>
@@ -20,7 +20,7 @@ const { class: className = '' } = Astro.props;
       </p>
       <a
         href="/analiza-tu-multa/"
-        class="mt-4 inline-flex items-center gap-1.5 rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        class="mt-4 inline-flex items-center gap-1.5 rounded-md bg-green-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-green-700"
       >
         Analiza tu multa gratis
         <Icon name="arrow-right" size={16} strokeWidth={2} />

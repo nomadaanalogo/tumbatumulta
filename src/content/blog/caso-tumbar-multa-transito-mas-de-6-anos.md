@@ -12,7 +12,7 @@ Vamos al caso.
 
 ## El punto de partida: una multa de más de 6 años que nunca pagué
 
-Hace más de seis años me pusieron un comparendo en el pueblo donde crecí. Sinceramente, nunca tuve intención de pagarlo de inmediato: como le pasa a mucha gente, desconfiaba de en qué terminaba esa plata, y preferí esperar a ver qué pasaba. Con los años me olvidé del tema — hasta que quise sacar un duplicado de mi licencia y el RUNT me lo bloqueó. En el SIMIT apareció la multa, ahora con un "cobro coactivo" activo.
+Hace **más de seis años** me pusieron un comparendo en el pueblo donde crecí. Sinceramente, nunca tuve intención de pagarlo de inmediato: como le pasa a mucha gente, desconfiaba de en qué terminaba esa plata, y preferí esperar a ver qué pasaba. Con los años me olvidé del tema — hasta que quise sacar un duplicado de mi licencia y **el RUNT me lo bloqueó**. En el SIMIT apareció la multa, ahora con un "cobro coactivo" activo.
 
 Aquí vale una aclaración honesta: **la desconfianza sobre en qué se usa esa plata no es, por sí sola, un argumento legal para no pagar.** Lo que sí importa legalmente es si el cobro se hizo bien y a tiempo. Y en mi caso, como vas a ver, no fue así.
 
@@ -24,7 +24,7 @@ Presenté el [derecho de petición](/blog/derecho-de-peticion-transito/) por esc
 
 ## La primera respuesta: nada de fondo
 
-Pasado el plazo, llegó una respuesta. Pero no traía ni el mandamiento de pago, ni la constancia de ejecutoria, ni nada de lo pedido — solo un párrafo genérico diciendo que "la multa se encuentra en proceso de cobro" y una fecha de la infracción que ni siquiera coincidía con la que yo tenía registrada.
+Pasado el plazo, llegó una respuesta. Pero **no traía nada de lo pedido** — ni el mandamiento de pago, ni la constancia de ejecutoria — solo un párrafo genérico diciendo que "la multa se encuentra en proceso de cobro" y una fecha de la infracción que **ni siquiera coincidía** con la que yo tenía registrada.
 
 Como ya sabía (otra vez, gracias al prompt) que **"responder" no es lo mismo que "resolver de fondo"**, no me quedé ahí.
 
@@ -38,7 +38,7 @@ La respuesta, cuando llegó, fue todavía más floja: una excusa genérica (una 
 
 Con dos intentos fallidos y el plazo vencido, el siguiente paso — según lo que explica el artículo sobre [tutela por derecho de petición no respondido](/blog/tutela-derecho-peticion-no-respondido/) — era la acción de tutela. La presenté por el portal de Tutela en Línea, sin necesidad de abogado, describiendo los hechos: qué pedí, cuándo, y por qué las dos respuestas no resolvían de fondo.
 
-El juez falló en menos de 10 días hábiles y ordenó a la entidad responder de fondo dentro de 48 horas, con copia completa del expediente.
+El juez falló en **menos de 10 días hábiles** y ordenó a la entidad responder de fondo dentro de **48 horas**, con copia completa del expediente.
 
 ## Lo que apareció en el expediente
 

@@ -14,23 +14,23 @@ Es una de las infracciones más frecuentes, y la mayoría se detecta por **fotom
 
 ## Por pasar semáforo en rojo
 
-También suele detectarse por cámara en las intersecciones. Aplican los mismos argumentos que el exceso de velocidad (señalización, calibración, notificación a tiempo), más la calidad de la imagen: si no se ve con claridad que el semáforo estaba en rojo en el momento exacto, es un punto a revisar.
+También suele detectarse por **cámara** en las intersecciones. Aplican los mismos argumentos que el exceso de velocidad (señalización, calibración, notificación a tiempo), más la **calidad de la imagen**: si no se ve con claridad que el semáforo estaba en rojo en el momento exacto, es un punto a revisar.
 
 ## Por mal parqueo o estacionamiento indebido
 
-Normalmente la impone un agente en el sitio (comparendo físico), aunque algunas ciudades usan también cámaras móviles. Aquí el argumento más común no es técnico sino de **hecho**: si la señalización de "no parquear" en ese punto era inexistente, confusa, o el vehículo ya no estaba ahí cuando se generó el comparendo, vale la pena revisarlo.
+Normalmente la impone un **agente en el sitio** (comparendo físico), aunque algunas ciudades usan también cámaras móviles. Aquí el argumento más común no es técnico sino de **hecho**: si la señalización de "no parquear" en ese punto era inexistente, confusa, o el vehículo **ya no estaba ahí** cuando se generó el comparendo, vale la pena revisarlo.
 
 ## Por documentos vencidos (SOAT, revisión tecnomecánica, licencia)
 
-Estas dependen de una fecha objetiva y verificable (la de vencimiento del documento), por lo que suelen ser **más difíciles de impugnar por el fondo** — si el documento efectivamente estaba vencido, no hay mucho argumento de forma que lo cambie. Aquí el terreno más útil es revisar si el comparendo en sí fue notificado y tramitado correctamente, y los plazos de [caducidad y prescripción](/blog/caducidad-vs-prescripcion-multas-transito/) igual aplican.
+Estas dependen de una **fecha objetiva y verificable** (la de vencimiento del documento), por lo que suelen ser **más difíciles de impugnar por el fondo** — si el documento efectivamente estaba vencido, no hay mucho argumento de forma que lo cambie. Aquí el terreno más útil es revisar si el comparendo en sí fue **notificado y tramitado correctamente**, y los plazos de [caducidad y prescripción](/blog/caducidad-vs-prescripcion-multas-transito/) igual aplican.
 
 ## Por uso del celular al conducir
 
-Generalmente comparendo físico, con el agente como testigo directo. La defensa suele girar en torno a si el agente identificó bien la conducta y si el comparendo describe con precisión el hecho — errores materiales en la descripción son un argumento válido.
+Generalmente comparendo físico, con **el agente como testigo directo**. La defensa suele girar en torno a si el agente identificó bien la conducta y si el comparendo describe con precisión el hecho — **errores materiales en la descripción** son un argumento válido.
 
 ## Por no usar cinturón de seguridad o casco
 
-Igual que el celular: comparendo físico, testimonio del agente. Revisa que los datos del comparendo (fecha, hora, lugar, descripción) sean consistentes.
+Igual que el celular: comparendo físico, testimonio del agente. Revisa que los datos del comparendo (fecha, hora, lugar, descripción) sean **consistentes**.
 
 ## Por embriaguez o alcoholemia (la excepción)
 
