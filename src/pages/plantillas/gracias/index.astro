@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+const title = 'Estado de tu compra';
+const description = 'Verificando el estado de tu pago.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-xl px-4 py-16 text-center sm:px-6">
+    <div id="estado-cargando">
+      <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+        <Icon name="clock" size={26} strokeWidth={1.8} />
+      </span>
+      <h1 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">Verificando tu pago...</h1>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Esto toma solo unos segundos.</p>
+    </div>
+
+    <div id="estado-aprobado" class="hidden">
+      <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300">
+        <Icon name="check-circle" size={26} strokeWidth={1.8} />
+      </span>
+      <h1 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">¡Pago confirmado!</h1>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+        Tu documento ya está listo. Ábrelo y guárdalo o imprímelo como PDF (Ctrl+P o Cmd+P).
+      </p>
+      <a
+        id="descargar-link"
+        href="#"
+        class="mt-6 inline-flex items-center gap-2 rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-700"
+      >
+        <Icon name="document" size={18} strokeWidth={2} />
+        Ver y descargar mi documento
+      </a>
+    </div>
+
+    <div id="estado-pendiente" class="hidden">
+      <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300">
+        <Icon name="alert-triangle" size={26} strokeWidth={1.8} />
+      </span>
+      <h1 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">Tu pago está pendiente</h1>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+        Algunos métodos de pago (como PSE) tardan unos minutos en confirmarse. Recarga esta página
+        en un momento.
+      </p>
+      <button
+        id="recargar-btn"
+        type="button"
+        class="mt-6 inline-flex items-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+      >
+        Recargar
+      </button>
+    </div>
+
+    <div id="estado-error" class="hidden">
+      <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300">
+        <Icon name="alert-triangle" size={26} strokeWidth={1.8} />
+      </span>
+      <h1 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">No pudimos confirmar tu pago</h1>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+        Si crees que esto es un error y ya te hicieron el cobro, escríbenos a
+        <a href="mailto:contacto@tumbatumulta.co" class="text-blue-700 underline dark:text-blue-400">
+          contacto@tumbatumulta.co
+        </a>
+        con tu número de transacción.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    const cargando = document.getElementById('estado-cargando');
+    const aprobado = document.getElementById('estado-aprobado');
+    const pendiente = document.getElementById('estado-pendiente');
+    const error = document.getElementById('estado-error');
+    const descargarLink = document.getElementById('descargar-link') as HTMLAnchorElement | null;
+    const recargarBtn = document.getElementById('recargar-btn');
+
+    function show(el: HTMLElement | null) {
+      [cargando, aprobado, pendiente, error].forEach((node) => node?.classList.add('hidden'));
+      el?.classList.remove('hidden');
+    }
+
+    recargarBtn?.addEventListener('click', () => window.location.reload());
+
+    async function verificar() {
+      if (!id) {
+        show(error);
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/estado-pago?id=${encodeURIComponent(id)}`);
+        const data = await res.json();
+
+        if (data.status === 'APPROVED') {
+          if (descargarLink) descargarLink.href = `/api/descargar?id=${encodeURIComponent(id)}`;
+          show(aprobado);
+        } else if (data.status === 'PENDING') {
+          show(pendiente);
+        } else {
+          show(error);
+        }
+      } catch {
+        show(error);
+      }
+    }
+
+    verificar();
+  </script>
+</BaseLayout>
