@@ -17,7 +17,9 @@ export type IconName =
   | 'megaphone'
   | 'question'
   | 'arrow-right'
-  | 'robot';
+  | 'robot'
+  | 'heart'
+  | 'share';
 
 const ICONS: Record<IconName, string> = {
   scale:
@@ -47,6 +49,10 @@ const ICONS: Record<IconName, string> = {
   'arrow-right': '<line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>',
   robot:
     '<circle cx="12" cy="3.2" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="4.4" x2="12" y2="6.5"/><rect x="4.5" y="6.5" width="15" height="12.5" rx="3"/><circle cx="9" cy="12.7" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="12.7" r="1.4" fill="currentColor" stroke="none"/><line x1="8.5" y1="16.3" x2="15.5" y2="16.3"/><line x1="2" y1="11" x2="4.5" y2="11"/><line x1="19.5" y1="11" x2="22" y2="11"/>',
+  heart:
+    '<path d="M12 20.5s-7.5-4.7-10-9.3C.6 8 2 4.5 5.4 3.7c2-.5 4 .3 5.1 2 .3.4.4.6.5.9.1-.3.2-.5.5-.9 1.1-1.7 3.1-2.5 5.1-2 3.4.8 4.8 4.3 3.4 7.5-2.5 4.6-10 9.3-10 9.3z"/>',
+  share:
+    '<circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="6.7"/><line x1="8.2" y1="13.2" x2="15.8" y2="17.3"/>',
 };
 
 interface Props {

@@ -12,12 +12,22 @@ function isActive(href: string) {
 
 <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
   <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
-    <a href="/" class="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white">
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white">
-        <Icon name="scale" size={20} strokeWidth={2} />
-      </span>
-      {SITE_NAME}
-    </a>
+    <div class="flex items-center gap-2">
+      <a href="/" class="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white">
+          <Icon name="scale" size={20} strokeWidth={2} />
+        </span>
+        {SITE_NAME}
+      </a>
+      <button
+        type="button"
+        id="open-share-modal"
+        aria-label="Compartir"
+        class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-500 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+      >
+        <Icon name="share" size={17} strokeWidth={2} />
+      </button>
+    </div>
 
     <nav class="hidden gap-6 text-sm font-medium sm:flex">
       {
@@ -65,3 +75,105 @@ function isActive(href: string) {
     </details>
   </div>
 </header>
+
+<dialog
+  id="share-modal"
+  class="fixed inset-0 m-auto w-[90vw] max-w-sm rounded-3xl border-0 p-0 shadow-2xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm dark:bg-slate-900"
+>
+  <div class="p-6 text-center">
+    <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+      <Icon name="share" size={20} strokeWidth={2} />
+    </span>
+    <h2 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Comparte esta guía</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+      Puede ayudarle a alguien más a no pagar de más.
+    </p>
+
+    <div class="mt-5 grid grid-cols-2 gap-3">
+      <a
+        id="share-whatsapp"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
+      >
+        WhatsApp
+      </a>
+      <a
+        id="share-facebook"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 rounded-xl bg-[#1877F2] px-4 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
+      >
+        Facebook
+      </a>
+      <a
+        id="share-x"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition-transform hover:scale-105 dark:bg-slate-700"
+      >
+        X / Twitter
+      </a>
+      <button
+        type="button"
+        id="share-copy-link"
+        class="flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition-transform hover:scale-105 dark:border-slate-700 dark:text-slate-200"
+      >
+        <Icon name="copy" size={15} strokeWidth={2} />
+        <span id="share-copy-link-label">Copiar enlace</span>
+      </button>
+    </div>
+
+    <button
+      type="button"
+      id="close-share-modal"
+      class="mt-6 text-sm font-semibold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+    >
+      Cerrar
+    </button>
+  </div>
+</dialog>
+
+<script>
+  const shareModal = document.getElementById('share-modal') as HTMLDialogElement | null;
+  const openShareBtn = document.getElementById('open-share-modal');
+  const closeShareBtn = document.getElementById('close-share-modal');
+  const whatsappLink = document.getElementById('share-whatsapp') as HTMLAnchorElement | null;
+  const facebookLink = document.getElementById('share-facebook') as HTMLAnchorElement | null;
+  const xLink = document.getElementById('share-x') as HTMLAnchorElement | null;
+  const copyLinkBtn = document.getElementById('share-copy-link');
+  const copyLinkLabel = document.getElementById('share-copy-link-label');
+
+  openShareBtn?.addEventListener('click', () => {
+    const url = window.location.href;
+    const text = `${document.title} — antes de pagar tu multa, evalúa tus opciones:`;
+
+    if (whatsappLink) whatsappLink.href = `https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`;
+    if (facebookLink) facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    if (xLink) xLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+
+    shareModal?.showModal();
+  });
+
+  closeShareBtn?.addEventListener('click', () => shareModal?.close());
+  shareModal?.addEventListener('click', (e) => {
+    if (e.target === shareModal) shareModal.close();
+  });
+
+  copyLinkBtn?.addEventListener('click', async () => {
+    if (!copyLinkLabel) return;
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      const original = copyLinkLabel.textContent;
+      copyLinkLabel.textContent = '¡Copiado!';
+      setTimeout(() => {
+        copyLinkLabel.textContent = original;
+      }, 2000);
+    } catch {
+      copyLinkLabel.textContent = 'No se pudo copiar';
+    }
+  });
+</script>

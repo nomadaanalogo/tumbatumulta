@@ -18,7 +18,7 @@ const { text, id = 'copy-box' } = Astro.props;
     <button
       type="button"
       data-copy-target={id}
-      class="copy-btn inline-flex shrink-0 items-center gap-1.5 rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700"
+      class="copy-btn inline-flex shrink-0 items-center gap-1.5 rounded-md bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
     >
       <Icon name="copy" size={14} strokeWidth={2} class="copy-btn-icon" />
       <span class="copy-btn-label">Copiar prompt</span>
