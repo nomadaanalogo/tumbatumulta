@@ -8,6 +8,7 @@ export const NAV_LINKS = [
   { href: '/', label: 'Inicio' },
   { href: '/blog/', label: 'Guía' },
   { href: '/analiza-tu-multa/', label: 'Analiza tu multa' },
+  { href: '/plantillas/', label: 'Plantillas' },
   { href: '/faq/', label: 'FAQ' },
 ];
 

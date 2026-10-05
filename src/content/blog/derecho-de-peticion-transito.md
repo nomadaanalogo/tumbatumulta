@@ -60,4 +60,4 @@ Si vence el plazo sin respuesta, o si la respuesta es evasiva y no resuelve lo q
 
 Antes de pedir cualquier cosa "a ciegas", **ubica primero en qué punto está tu caso**: si nunca hubo resolución sancionatoria, si ya hay un mandamiento de pago, si es una fotomulta, etc. Eso te va a decir exactamente qué pedir. Nuestro [prompt de análisis con IA](/analiza-tu-multa/) puede ayudarte a identificarlo y hasta a redactar el texto de tu petición.
 
-Si prefieres no redactarlo desde cero, tenemos [plantillas de derecho de petición listas para llenar](/plantillas/derecho-de-peticion/) para los escenarios más comunes (expediente de cobro coactivo, prescripción, caducidad, certificado de calibración).
+Si prefieres no redactarlo desde cero, tenemos [plantillas gratis listas para llenar](/plantillas/) para los escenarios más comunes: comparendo prescrito, cobro coactivo prescrito, solicitar el expediente completo, y tutela si no te responden.
