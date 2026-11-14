@@ -6,30 +6,14 @@ import DonateModal from '../components/DonateModal.astro';
 import { AI_PROMPT } from '../data/ai-prompt';
 import { SITE_NAME } from '../consts';
 
-const featured: { href: string; title: string; description: string; icon: IconName }[] = [
+type LinkItem = { href: string; title: string; description: string; icon: IconName };
+
+const featured: LinkItem[] = [
   {
-    href: '/blog/simit-vs-runt-diferencias/',
-    title: 'SIMIT: cómo consultar tu multa por placa o cédula',
-    description: 'El paso a paso para consultar el portal oficial, y qué hacer con lo que encuentres antes de pagar.',
-    icon: 'search',
-  },
-  {
-    href: '/blog/como-tumbar-una-multa-de-transito-en-colombia/',
-    title: 'Cómo tumbar o anular una multa de tránsito',
-    description: 'Guía rápida en 5 pasos: qué revisar primero y cuándo el proceso es rápido de verdad.',
-    icon: 'shield-check',
-  },
-  {
-    href: '/blog/recursos-reposicion-apelacion-comparendo/',
-    title: 'Cómo impugnar una multa de tránsito',
-    description: 'Los recursos de reposición y apelación, formalmente, y los plazos que no te puedes saltar.',
-    icon: 'scale',
-  },
-  {
-    href: '/blog/multas-de-transito-en-colombia-guia-completa/',
-    title: 'Multas de tránsito en Colombia: guía completa',
-    description: 'El mapa general: qué es una multa, cómo consultarla, y cuándo la ley te respalda para no pagarla.',
-    icon: 'document',
+    href: '/blog/caducidad-vs-prescripcion-multas-transito/',
+    title: 'Caducidad vs. prescripción: la diferencia que más dinero te puede ahorrar',
+    description: 'Son dos figuras distintas y casi nadie las explica bien. Aquí sabrás cuál aplica a tu caso.',
+    icon: 'clock',
   },
   {
     href: '/blog/no-pagues-tu-multa-de-transito/',
@@ -38,17 +22,16 @@ const featured: { href: string; title: string; description: string; icon: IconNa
     icon: 'check-circle',
   },
   {
-    href: '/blog/caso-tumbar-multa-transito-mas-de-6-anos/',
-    title: 'Caso ilustrativo: así se tumba una multa de más de 6 años',
-    description: 'Derecho de petición, un segundo intento, tutela, y por qué al final se cayó el cobro.',
-    icon: 'sparkles',
+    href: '/blog/como-tumbar-una-multa-de-transito-en-colombia/',
+    title: 'Cómo tumbar o anular una multa de tránsito',
+    description: 'Guía rápida en 5 pasos: qué revisar primero y cuándo el proceso es rápido de verdad.',
+    icon: 'shield-check',
   },
   {
-    href: '/blog/caducidad-vs-prescripcion-multas-transito/',
-    title: 'Caducidad vs. prescripción: la diferencia que más dinero te puede ahorrar',
-    description:
-      'Son dos figuras distintas y casi nadie las explica bien. Aquí sabrás cuál aplica a tu caso.',
-    icon: 'clock',
+    href: '/blog/simit-vs-runt-diferencias/',
+    title: 'SIMIT: cómo consultar tu multa por placa o cédula',
+    description: 'El paso a paso para consultar el portal oficial, y qué hacer con lo que encuentres antes de pagar.',
+    icon: 'search',
   },
   {
     href: '/blog/que-es-el-cobro-coactivo-en-colombia/',
@@ -57,31 +40,31 @@ const featured: { href: string; title: string; description: string; icon: IconNa
     icon: 'lock',
   },
   {
-    href: '/blog/tipos-de-multas-de-transito-en-colombia/',
-    title: 'Tipos de multas de tránsito en Colombia',
-    description: 'Velocidad, semáforo, parqueo, documentos, alcoholemia: qué tan defendible es cada una.',
-    icon: 'camera',
+    href: '/blog/caso-tumbar-multa-transito-mas-de-6-anos/',
+    title: 'Caso ilustrativo: así se tumba una multa de más de 6 años',
+    description: 'Derecho de petición, un segundo intento, tutela, y por qué al final se cayó el cobro.',
+    icon: 'sparkles',
   },
 ];
 
-const steps: { icon: IconName; title: string; description: string }[] = [
+const nextSteps: LinkItem[] = [
   {
-    icon: 'robot',
-    title: '1. Analiza tu multa con IA',
-    description:
-      'Copia el prompt de arriba en ChatGPT, Gemini o Claude junto con el pantallazo del SIMIT para una <strong>recomendación puntual sobre tu caso</strong>.',
+    href: '/plantillas/',
+    title: 'Plantillas gratis de derecho de petición y tutela',
+    description: 'Si la IA te dice que tienes un argumento, aquí tienes el documento listo para llenar.',
+    icon: 'document',
   },
   {
-    icon: 'search',
-    title: '2. Profundiza si lo necesitas',
-    description:
-      'Lee los artículos relevantes a tu situación: <strong>fecha del comparendo</strong>, tipo de infracción, si te notificaron o no.',
+    href: '/blog/derecho-de-peticion-transito/',
+    title: 'Cómo presentar el derecho de petición',
+    description: 'A quién se lo envías, qué pedir y cuánto tiempo tienen para responderte.',
+    icon: 'mail',
   },
   {
-    icon: 'check-circle',
-    title: '3. Actúa a tiempo',
-    description:
-      'Presenta un derecho de petición, una excepción o un recurso <strong>dentro de los plazos legales</strong> — perderlos es lo que más le cuesta a la gente.',
+    href: '/blog/tutela-derecho-peticion-no-respondido/',
+    title: 'Si no te responden: la tutela',
+    description: 'Qué hacer cuando el organismo de tránsito ignora tu petición.',
+    icon: 'scale',
   },
 ];
 
@@ -91,167 +74,213 @@ const description =
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="mx-auto max-w-3xl px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
-    <p class="text-xl font-semibold text-slate-600 dark:text-slate-300 sm:text-2xl">
-      Antes de <span class="inline-block -rotate-1 text-red-600 line-through decoration-1 dark:text-red-400">pagar tu multa de tránsito</span>
-    </p>
-    <h1 class="mt-1 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-      evalúa tus opciones.
-    </h1>
+  <div class="relative isolate overflow-hidden">
+    <!-- Decorative background: soft blue glow + faint dot grid -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-linear-to-b from-blue-50 via-blue-50/40 to-transparent dark:from-blue-950/40 dark:via-blue-950/10"></div>
+    <div aria-hidden="true" class="hero-dots pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] text-blue-200 dark:text-blue-900/60"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-32 -top-24 -z-10 h-96 w-96 rounded-full bg-blue-300/30 blur-3xl dark:bg-blue-700/20"></div>
 
-    <p class="mt-5 inline-flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm font-bold text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-300">
-      <Icon name="alert-triangle" size={16} strokeWidth={2.2} />
-      No hagas acuerdos de pago, no te dejes presionar
-    </p>
+    <section id="analiza" class="mx-auto max-w-2xl scroll-mt-6 px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
+      <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        Antes de{' '}
+        <span class="text-red-600 line-through decoration-[3px] dark:text-red-400">pagar tu multa de tránsito</span>,{' '}
+        <span class="text-green-600 dark:text-green-400">evalúa tus opciones.</span>
+      </h1>
 
-    <p class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-      <strong class="bg-linear-to-r from-blue-600 via-sky-500 to-indigo-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-sky-300 dark:to-indigo-400">La ley te respalda</strong> y
-      no necesitas abogado —
-      <br class="sm:hidden" />
-      <strong class="bg-linear-to-r from-blue-600 via-sky-500 to-indigo-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-sky-300 dark:to-indigo-400">la IA te ayuda gratis</strong>.
-    </p>
-
-    <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">
-      ¿Ya sabes qué pedir? Mira las
-      <a href="/plantillas/" class="font-semibold text-blue-600 underline hover:no-underline dark:text-blue-400">
-        plantillas de derecho de petición gratis
-      </a>.
-    </p>
-
-    <div class="mx-auto mt-10 max-w-2xl overflow-hidden rounded-3xl border-2 border-blue-400 bg-white text-left shadow-xl shadow-blue-500/20 dark:border-blue-500 dark:bg-slate-950 dark:shadow-blue-500/10">
-      <div class="grid divide-y divide-slate-100 border-b border-slate-100 sm:grid-cols-4 sm:divide-x sm:divide-y-0 dark:divide-slate-800 dark:border-slate-800">
-        <div class="flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-2">
-          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-indigo-500 text-sm font-bold text-white shadow-sm shadow-blue-500/30">1</span>
-          <p class="text-sm leading-snug text-slate-700 dark:text-slate-300">
-            <strong class="text-slate-900 dark:text-white">Copia</strong> el{' '}
-            <button type="button" id="copy-prompt-shortcut" class="font-bold text-slate-900 underline decoration-emerald-400 decoration-2 underline-offset-2 dark:text-white">prompt</button>{' '}de abajo
-          </p>
-        </div>
-        <div class="flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-2">
-          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-indigo-500 text-sm font-bold text-white shadow-sm shadow-blue-500/30">2</span>
-          <p class="text-sm leading-snug text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">Pégalo</strong> en ChatGPT, Gemini o Claude</p>
-        </div>
-        <div class="flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-2">
-          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-indigo-500 text-sm font-bold text-white shadow-sm shadow-blue-500/30">3</span>
-          <p class="text-sm leading-snug text-slate-700 dark:text-slate-300">
-            <strong class="text-slate-900 dark:text-white">Adjunta el pantallazo</strong> de tu registro en el{' '}
-            <a href="https://www.fcm.org.co/simit/#/home-public" target="_blank" rel="noopener noreferrer" class="underline hover:text-emerald-700 dark:hover:text-emerald-400">SIMIT</a>
-          </p>
-        </div>
-        <div class="flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-2">
-          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-emerald-500 to-green-600 text-sm font-bold text-white shadow-sm shadow-emerald-500/30">4</span>
-          <p class="text-sm leading-snug text-slate-700 dark:text-slate-300">
-            Si te ayudamos, <strong class="text-slate-900 dark:text-white">no olvides apoyarnos</strong>
-          </p>
-          <button
-            type="button"
-            id="open-donate-modal"
-            class="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-pink-600 underline dark:text-pink-400"
-          >
-            <Icon name="heart" size={14} strokeWidth={2} />
-            Dona aquí
-          </button>
-        </div>
+      <div class="mt-6 flex items-center gap-3 rounded-xl bg-yellow-400 px-4 py-3.5 text-slate-900 shadow-lg shadow-yellow-500/30 sm:px-5 sm:py-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-900 text-yellow-400">
+          <Icon name="alert-triangle" size={22} strokeWidth={2.2} />
+        </span>
+        <p class="text-lg font-bold leading-snug sm:text-xl">
+          No hagas acuerdos de pago ni te dejes presionar.
+        </p>
       </div>
 
-      <div class="bg-slate-50/60 p-4 dark:bg-slate-900/40 sm:p-5">
-        <CopyBox id="ai-prompt-home" text={AI_PROMPT} />
-      </div>
-    </div>
-
-    <p class="mt-4 text-xs text-slate-500 dark:text-slate-500">
-      100% gratis · sin registro · no reemplaza a un abogado en casos de alto valor
-    </p>
-
-    <div class="mx-auto mt-10 flex max-w-2xl gap-3 rounded-2xl border border-amber-200 bg-linear-to-br from-amber-50 to-orange-50 p-5 text-left shadow-sm shadow-amber-900/5 dark:border-amber-900 dark:from-amber-950/40 dark:to-orange-950/20">
-      <Icon name="alert-triangle" size={22} class="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
-      <p class="text-sm leading-relaxed text-amber-900 dark:text-amber-200">
-        <strong>Una excepción honesta:</strong> si tu comparendo es por <strong>embriaguez o alcoholemia</strong>,
-        esto no aplica igual. Ese tipo de infracción tiene una <strong>prueba técnica directa</strong> y
-        consecuencias que van más allá de una multa administrativa — no es un caso donde recomendemos buscar
-        defectos de forma para no pagar. Si es tu situación, <strong>consulta directamente con un abogado</strong>.
+      <p class="mt-5 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+        La ley te respalda, no necesitas abogado y la IA te ayuda gratis a revisar tu caso.
       </p>
+
+      <div class="mt-8 overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-xl shadow-slate-900/10 ring-4 ring-slate-100 dark:border-slate-700 dark:bg-slate-950 dark:ring-slate-900">
+        <div class="flex items-center gap-2 border-b border-slate-200 bg-slate-900 px-5 py-3 text-white dark:bg-slate-800 dark:border-slate-800">
+          <Icon name="robot" size={20} strokeWidth={2} />
+          <p class="font-semibold">Analiza tu multa con IA en 3 pasos</p>
+        </div>
+
+        <ol class="relative p-5 text-base text-slate-700 dark:text-slate-300 sm:p-6">
+          <span aria-hidden="true" class="absolute bottom-10 left-[2.15rem] top-10 w-px bg-slate-300 sm:left-[2.4rem] dark:bg-slate-700"></span>
+          <li class="relative flex gap-3 pb-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-900 text-sm font-bold text-white ring-4 dark:bg-white dark:text-slate-900 ring-white dark:ring-slate-950">1</span>
+            <span class="pt-0.5">
+              <strong class="text-slate-900 dark:text-white">Copia</strong> el{' '}
+              <button type="button" id="copy-prompt-shortcut" class="font-semibold text-slate-900 underline decoration-2 underline-offset-2 hover:no-underline dark:text-white">prompt de abajo</button>.
+            </span>
+          </li>
+          <li class="relative flex gap-3 pb-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-900 text-sm font-bold text-white ring-4 dark:bg-white dark:text-slate-900 ring-white dark:ring-slate-950">2</span>
+            <span class="pt-0.5"><strong class="text-slate-900 dark:text-white">Pégalo</strong> en ChatGPT, Gemini o Claude.</span>
+          </li>
+          <li class="relative flex gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-900 text-sm font-bold text-white ring-4 dark:bg-white dark:text-slate-900 ring-white dark:ring-slate-950">3</span>
+            <span class="pt-0.5">
+              <strong class="text-slate-900 dark:text-white">Adjunta el pantallazo</strong> de tu registro en el{' '}
+              <a href="https://www.fcm.org.co/simit/#/home-public" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-900 underline decoration-2 underline-offset-2 hover:no-underline dark:text-white">SIMIT</a>.
+            </span>
+          </li>
+        </ol>
+
+        <div class="border-t border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/50 sm:p-5">
+          <CopyBox id="ai-prompt-home" text={AI_PROMPT} maxHeight="max-h-48 sm:max-h-56" />
+        </div>
+      </div>
+
+      <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+        100% gratis · sin registro · no reemplaza a un abogado en casos de alto valor.
+      </p>
+
+      <div class="mt-6 flex flex-col gap-4 rounded-2xl border border-pink-200 bg-linear-to-br from-pink-50 to-rose-50 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-pink-900 dark:from-pink-950/40 dark:to-rose-950/20">
+        <div class="flex gap-3">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-pink-500 to-rose-500 text-white shadow-md shadow-pink-500/30">
+            <Icon name="heart" size={20} strokeWidth={2} />
+          </span>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white">¿Te ayudamos? Apóyanos</p>
+            <p class="mt-0.5 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+              Este sitio es gratis y se mantiene con donaciones. Cualquier aporte ayuda a más personas.
+            </p>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="open-donate-modal"
+          class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-linear-to-br from-pink-500 to-rose-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-pink-500/30 transition-transform hover:-translate-y-0.5"
+        >
+          <Icon name="heart" size={16} strokeWidth={2} />
+          Donar
+        </button>
+      </div>
+
+      <div class="mt-6 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900 dark:bg-amber-950/30">
+        <Icon name="alert-triangle" size={20} class="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
+        <p class="text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+          <strong>Una excepción honesta:</strong> si tu comparendo es por <strong>embriaguez o alcoholemia</strong>,
+          esto no aplica igual. Hay una prueba técnica directa y consecuencias que van más allá de una multa
+          administrativa, así que no recomendamos buscar defectos de forma. <strong>Consulta con un abogado.</strong>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section class="border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-2xl px-4 py-14 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400">Siguiente paso</p>
+      <h2 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Después de la respuesta de la IA</h2>
+      <p class="mt-2 text-base text-slate-700 dark:text-slate-300">
+        Actúa dentro de los plazos legales: perderlos es lo que más le cuesta a la gente.
+      </p>
+      <ul class="mt-6 space-y-3">
+        {
+          nextSteps.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md hover:shadow-blue-900/5 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-800"
+              >
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                  <Icon name={item.icon} size={20} strokeWidth={1.8} />
+                </span>
+                <span class="flex-1">
+                  <span class="block font-semibold text-slate-900 group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-400">{item.title}</span>
+                  <span class="mt-1 block text-base text-slate-600 dark:text-slate-400">{item.description}</span>
+                </span>
+                <Icon name="arrow-right" size={18} strokeWidth={2} class="mt-2.5 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 
-  <section class="border-t border-slate-200 bg-linear-to-b from-slate-50 to-white dark:border-slate-800 dark:from-slate-900 dark:to-slate-950">
-    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Los artículos más buscados</h2>
-      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+  <section class="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-2xl px-4 py-14 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400">Aprende más</p>
+      <h2 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Los artículos más buscados</h2>
+      <ul class="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
         {
           featured.map((post) => (
-            <a
-              href={post.href}
-              class="group flex gap-4 rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-lg hover:shadow-indigo-500/10 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-indigo-900"
-            >
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-indigo-500 to-violet-500 text-white shadow-sm shadow-indigo-500/30 transition-transform group-hover:scale-105">
-                <Icon name={post.icon} size={20} strokeWidth={1.8} />
-              </span>
-              <div>
-                <h3 class="font-semibold text-slate-900 dark:text-white">{post.title}</h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{post.description}</p>
-              </div>
-            </a>
+            <li>
+              <a href={post.href} class="group flex items-start gap-4 py-4">
+                <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-blue-700 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:text-white group-hover:ring-blue-600 dark:bg-slate-900 dark:text-blue-300 dark:ring-slate-700">
+                  <Icon name={post.icon} size={18} strokeWidth={1.8} />
+                </span>
+                <span>
+                  <span class="block font-semibold text-slate-900 group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-400">{post.title}</span>
+                  <span class="mt-1 block text-base text-slate-600 dark:text-slate-400">{post.description}</span>
+                </span>
+              </a>
+            </li>
           ))
         }
-      </div>
-      <div class="mt-8">
-        <a
-          href="/blog/"
-          class="inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
-        >
-          Ver todos los artículos de la guía
+      </ul>
+      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a href="/blog/" class="inline-flex items-center gap-1 font-semibold text-blue-700 hover:underline dark:text-blue-400">
+          Ver todos los artículos
           <Icon name="arrow-right" size={16} strokeWidth={2} />
+        </a>
+        <a href="#analiza" class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-600/20 hover:bg-blue-700">
+          <Icon name="robot" size={18} strokeWidth={2} />
+          Analizar mi multa con IA
         </a>
       </div>
     </div>
   </section>
 
-  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-    <div class="grid gap-8 sm:grid-cols-3">
-      {
-        steps.map((step) => (
-          <div>
-            <span
-              class:list={[
-                'flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm',
-                step.icon === 'robot' && 'bg-linear-to-br from-emerald-400 to-teal-500 shadow-emerald-500/30',
-                step.icon === 'search' && 'bg-linear-to-br from-indigo-500 to-violet-500 shadow-indigo-500/30',
-                step.icon === 'check-circle' && 'bg-linear-to-br from-sky-400 to-cyan-500 shadow-cyan-500/30',
-              ]}
-            >
-              <Icon name={step.icon} size={20} strokeWidth={1.8} />
-            </span>
-            <h3 class="mt-4 font-semibold text-slate-900 dark:text-white">{step.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400" set:html={step.description} />
-          </div>
-        ))
-      }
-    </div>
-
-    <div class="mt-12 text-center">
-      <a
-        href="#top"
-        onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"
-        class="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-emerald-500 to-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30"
-      >
-        <Icon name="robot" size={18} strokeWidth={2} />
-        Copiar el prompt y analizar mi multa
-      </a>
-    </div>
-  </section>
+  <button
+    type="button"
+    data-open-donate
+    aria-label="Donar"
+    class="fixed bottom-4 left-4 z-40 inline-flex items-center gap-2 rounded-full bg-linear-to-br from-pink-500 to-rose-500 py-3 pl-3 pr-4 text-sm font-semibold text-white shadow-lg shadow-pink-500/40 transition-transform hover:-translate-y-0.5 hover:scale-105 sm:bottom-6 sm:left-6"
+  >
+    <Icon name="heart" size={20} strokeWidth={2.2} class="heart-beat" />
+    Donar
+  </button>
 
   <DonateModal />
 </BaseLayout>
+
+<style>
+  .hero-dots {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  }
+
+  @keyframes heart-beat {
+    0%, 70%, 100% { transform: scale(1); }
+    80% { transform: scale(1.25); }
+    90% { transform: scale(0.95); }
+  }
+  :global(.heart-beat) {
+    animation: heart-beat 2.4s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.heart-beat) { animation: none; }
+  }
+</style>
 
 <script>
   const shortcutBtn = document.getElementById('copy-prompt-shortcut');
   const realCopyBtn = document.querySelector<HTMLButtonElement>('[data-copy-target="ai-prompt-home"]');
   const promptEl = document.getElementById('ai-prompt-home');
 
-  shortcutBtn?.addEventListener('click', async () => {
-    window.scrollBy({ top: 180, behavior: 'smooth' });
+  document.querySelector<HTMLAnchorElement>('a[href="#analiza"]')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('analiza')?.scrollIntoView({ behavior: 'smooth' });
+  });
 
+  shortcutBtn?.addEventListener('click', async () => {
+    promptEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     if (!promptEl) return;
     try {
       await navigator.clipboard.writeText(promptEl.textContent ?? '');

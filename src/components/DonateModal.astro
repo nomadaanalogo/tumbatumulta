@@ -65,14 +65,14 @@ const { continueLabel } = Astro.props;
 
 <script>
   const modal = document.getElementById('donate-modal') as HTMLDialogElement | null;
-  const openBtn = document.getElementById('open-donate-modal');
+  const openBtns = document.querySelectorAll<HTMLElement>('#open-donate-modal, [data-open-donate]');
   const closeBtn = document.getElementById('close-donate-modal');
   const continueBtn = document.getElementById('donate-modal-continue');
   const copyBtn = document.getElementById('copy-donate-key');
   const copyLabel = document.getElementById('copy-donate-key-label');
   const keyEl = document.getElementById('donate-key');
 
-  openBtn?.addEventListener('click', () => modal?.showModal());
+  openBtns.forEach((btn) => btn.addEventListener('click', () => modal?.showModal()));
   closeBtn?.addEventListener('click', () => modal?.close());
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
