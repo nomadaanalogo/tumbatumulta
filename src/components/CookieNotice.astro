@@ -36,18 +36,33 @@ import Icon from './Icon.astro';
   const acceptButton = document.getElementById('cookie-notice-accept');
   const declineButton = document.getElementById('cookie-notice-decline');
 
+  // Expose the notice's height as --cookie-offset so other fixed elements
+  // (e.g. the floating donate button) can sit above it instead of under it.
+  const root = document.documentElement;
+  const syncOffset = () => {
+    const visible = notice && !notice.classList.contains('hidden');
+    root.style.setProperty('--cookie-offset', visible ? `${notice.offsetHeight}px` : '0px');
+  };
+
   if (notice && !localStorage.getItem(STORAGE_KEY)) {
     notice.classList.remove('hidden');
+    syncOffset();
+    new ResizeObserver(syncOffset).observe(notice);
   }
+
+  const hideNotice = () => {
+    notice?.classList.add('hidden');
+    syncOffset();
+  };
 
   acceptButton?.addEventListener('click', () => {
     localStorage.setItem(STORAGE_KEY, 'granted');
-    notice?.classList.add('hidden');
+    hideNotice();
     window.dispatchEvent(new Event('cookie-consent-granted'));
   });
 
   declineButton?.addEventListener('click', () => {
     localStorage.setItem(STORAGE_KEY, 'denied');
-    notice?.classList.add('hidden');
+    hideNotice();
   });
 </script>
