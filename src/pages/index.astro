@@ -1,6 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon, { type IconName } from '../components/Icon.astro';
+import poseDedo from '../imagenes/pose_dedo_arriba.png';
+import posePulgar from '../imagenes/pose_pulgar_arriba.png';
+import expAaa from '../imagenes/exp_aaa.png';
+import expVamos from '../imagenes/exp_vamos.png';
+import expOjo from '../imagenes/exp_ojo.png';
 import CopyBox from '../components/CopyBox.astro';
 import DonateModal from '../components/DonateModal.astro';
 import { AI_PROMPT } from '../data/ai-prompt';
@@ -75,23 +81,37 @@ const description =
 
 <BaseLayout title={title} description={description}>
   <div class="relative isolate overflow-hidden">
-    <!-- Decorative background: soft blue glow + faint dot grid -->
-    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-linear-to-b from-blue-50 via-blue-50/40 to-transparent dark:from-blue-950/40 dark:via-blue-950/10"></div>
-    <div aria-hidden="true" class="hero-dots pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] text-blue-200 dark:text-blue-900/60"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-32 -top-24 -z-10 h-96 w-96 rounded-full bg-blue-300/30 blur-3xl dark:bg-blue-700/20"></div>
+    <!-- Decorative background: soft orange glow + faint dot grid -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-linear-to-b from-orange-50 via-orange-50/40 to-transparent dark:from-orange-950/40 dark:via-orange-950/10"></div>
+    <div aria-hidden="true" class="hero-dots pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] text-orange-200 dark:text-orange-900/60"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-32 -top-24 -z-10 h-96 w-96 rounded-full bg-orange-300/30 blur-3xl dark:bg-orange-700/20"></div>
 
-    <section id="analiza" class="mx-auto max-w-2xl scroll-mt-6 px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
-      <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-        Antes de{' '}
-        <span class="text-red-600 line-through decoration-[3px] dark:text-red-400">pagar tu multa de tránsito</span>,{' '}
-        <span class="text-green-600 dark:text-green-400">evalúa tus opciones.</span>
-      </h1>
+    <section id="analiza" class="mx-auto max-w-2xl scroll-mt-6 px-4 pb-32 pt-8 sm:px-6 sm:pt-12">
+      <div class="flex items-end gap-3 sm:gap-5">
+        <h1 class="flex-1 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+          Antes de{' '}
+          <span class="text-red-600 line-through decoration-[3px] dark:text-red-400">pagar tu multa de tránsito</span>,{' '}
+          <span class="text-green-600 dark:text-green-400">evalúa tus opciones.</span>
+        </h1>
+        <Image
+          src={poseDedo}
+          alt="Tumba, el cono abogado de TumbaTuMulta"
+          widths={[110, 176, 352]}
+          sizes="(min-width: 640px) 176px, 110px"
+          loading="eager"
+          class="w-[110px] shrink-0 drop-shadow-xl sm:w-44"
+        />
+      </div>
 
-      <div class="mt-6 flex items-center gap-3 rounded-xl bg-yellow-400 px-4 py-3.5 text-slate-900 shadow-lg shadow-yellow-500/30 sm:px-5 sm:py-4">
-        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-900 text-yellow-400">
-          <Icon name="alert-triangle" size={22} strokeWidth={2.2} />
-        </span>
-        <p class="text-lg font-bold leading-snug sm:text-xl">
+      <div class="mt-8 flex items-center gap-2 rounded-xl bg-yellow-400 py-2 pl-2 pr-4 text-slate-900 shadow-lg shadow-yellow-500/30 sm:gap-3 sm:pr-5">
+        <Image
+          src={expAaa}
+          alt=""
+          widths={[84, 112, 224]}
+          sizes="(min-width: 640px) 112px, 84px"
+          class="-mb-2 -mt-8 w-[84px] shrink-0 self-end sm:w-28"
+        />
+        <p class="py-2 text-lg font-bold leading-snug sm:text-xl">
           No hagas acuerdos de pago ni te dejes presionar.
         </p>
       </div>
@@ -138,10 +158,14 @@ const description =
       </p>
 
       <div class="mt-6 flex flex-col gap-4 rounded-2xl border border-pink-200 bg-linear-to-br from-pink-50 to-rose-50 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-pink-900 dark:from-pink-950/40 dark:to-rose-950/20">
-        <div class="flex gap-3">
-          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-pink-500 to-rose-500 text-white shadow-md shadow-pink-500/30">
-            <Icon name="heart" size={20} strokeWidth={2} />
-          </span>
+        <div class="flex items-center gap-3">
+          <Image
+            src={posePulgar}
+            alt=""
+            widths={[60, 120]}
+            sizes="60px"
+            class="-my-3 w-[60px] shrink-0"
+          />
           <div>
             <p class="font-semibold text-slate-900 dark:text-white">¿Te ayudamos? Apóyanos</p>
             <p class="mt-0.5 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
@@ -171,8 +195,15 @@ const description =
   </div>
 
   <section class="border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-2xl px-4 py-14 sm:px-6">
-      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400">Siguiente paso</p>
+    <div class="relative mx-auto max-w-2xl px-4 pb-32 pt-14 sm:px-6">
+      <Image
+        src={expVamos}
+        alt=""
+        widths={[112, 140, 280]}
+        sizes="(min-width: 640px) 140px, 112px"
+        class="pointer-events-none absolute right-4 top-0 w-28 -translate-y-full sm:right-6 sm:w-[140px]"
+      />
+      <p class="text-sm font-semibold uppercase tracking-wider text-orange-700 dark:text-orange-400">Siguiente paso</p>
       <h2 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Después de la respuesta de la IA</h2>
       <p class="mt-2 text-base text-slate-700 dark:text-slate-300">
         Actúa dentro de los plazos legales: perderlos es lo que más le cuesta a la gente.
@@ -183,16 +214,16 @@ const description =
             <li>
               <a
                 href={item.href}
-                class="group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md hover:shadow-blue-900/5 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-800"
+                class="group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-md hover:shadow-orange-900/5 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-orange-800"
               >
-                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300">
                   <Icon name={item.icon} size={20} strokeWidth={1.8} />
                 </span>
                 <span class="flex-1">
-                  <span class="block font-semibold text-slate-900 group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-400">{item.title}</span>
+                  <span class="block font-semibold text-slate-900 group-hover:text-orange-700 dark:text-white dark:group-hover:text-orange-400">{item.title}</span>
                   <span class="mt-1 block text-base text-slate-600 dark:text-slate-400">{item.description}</span>
                 </span>
-                <Icon name="arrow-right" size={18} strokeWidth={2} class="mt-2.5 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                <Icon name="arrow-right" size={18} strokeWidth={2} class="mt-2.5 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-orange-600" />
               </a>
             </li>
           ))
@@ -202,19 +233,26 @@ const description =
   </section>
 
   <section class="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40">
-    <div class="mx-auto max-w-2xl px-4 py-14 sm:px-6">
-      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400">Aprende más</p>
+    <div class="relative mx-auto max-w-2xl px-4 py-14 sm:px-6">
+      <Image
+        src={expOjo}
+        alt=""
+        widths={[112, 140, 280]}
+        sizes="(min-width: 640px) 140px, 112px"
+        class="pointer-events-none absolute right-4 top-0 w-28 -translate-y-full sm:right-6 sm:w-[140px]"
+      />
+      <p class="text-sm font-semibold uppercase tracking-wider text-orange-700 dark:text-orange-400">Aprende más</p>
       <h2 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Los artículos más buscados</h2>
       <ul class="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
         {
           featured.map((post) => (
             <li>
               <a href={post.href} class="group flex items-start gap-4 py-4">
-                <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-blue-700 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:text-white group-hover:ring-blue-600 dark:bg-slate-900 dark:text-blue-300 dark:ring-slate-700">
+                <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-orange-700 ring-1 ring-slate-200 transition-colors group-hover:bg-orange-600 group-hover:text-white group-hover:ring-orange-600 dark:bg-slate-900 dark:text-orange-300 dark:ring-slate-700">
                   <Icon name={post.icon} size={18} strokeWidth={1.8} />
                 </span>
                 <span>
-                  <span class="block font-semibold text-slate-900 group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-400">{post.title}</span>
+                  <span class="block font-semibold text-slate-900 group-hover:text-orange-700 dark:text-white dark:group-hover:text-orange-400">{post.title}</span>
                   <span class="mt-1 block text-base text-slate-600 dark:text-slate-400">{post.description}</span>
                 </span>
               </a>
@@ -223,11 +261,11 @@ const description =
         }
       </ul>
       <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-        <a href="/blog/" class="inline-flex items-center gap-1 font-semibold text-blue-700 hover:underline dark:text-blue-400">
+        <a href="/blog/" class="inline-flex items-center gap-1 font-semibold text-orange-700 hover:underline dark:text-orange-400">
           Ver todos los artículos
           <Icon name="arrow-right" size={16} strokeWidth={2} />
         </a>
-        <a href="#analiza" class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-600/20 hover:bg-blue-700">
+        <a href="#analiza" class="inline-flex items-center gap-2 rounded-lg bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-orange-600/20 hover:bg-orange-700">
           <Icon name="robot" size={18} strokeWidth={2} />
           Analizar mi multa con IA
         </a>
