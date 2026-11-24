@@ -22,7 +22,7 @@ export const TEMPLATES: DocTemplate[] = [
     summary:
       'Para cuando ya pasaron más de 3 años desde la infracción y nunca te notificaron válidamente un mandamiento de pago.',
     whoFor:
-      'Úsala si tu comparendo tiene más de 3 años desde la fecha de la infracción (no de la notificación) y no te han notificado un mandamiento de pago, o si el único mandamiento que conoces también tiene ya más de 3 años sin que haya pasado nada más. El artículo 159 de la Ley 769 de 2002 le da a la autoridad 3 años para cobrar la multa; pasado ese plazo sin una notificación válida que lo interrumpa, la acción de cobro prescribe.',
+      'Úsala si tu comparendo tiene más de 3 años desde la fecha de la infracción (no de la notificación) y no te han notificado un mandamiento de pago, o si el único mandamiento que conoces también tiene ya más de 3 años sin que haya pasado nada más. El artículo 159 de la Ley 769 de 2002 le da a la autoridad 3 años para cobrar la multa; pasado ese plazo sin una notificación válida que lo interrumpa, la acción de cobro prescribe. La plantilla incluye la petición clave: si la secretaría considera que tu multa no ha prescrito, tiene que demostrarlo con su propio cómputo — fechas, actuaciones que según ella interrumpieron el término, normas y soportes. Así no puede responderte solo "la obligación sigue vigente".',
     requisitos: [
       'La fecha exacta de la infracción (la del hecho, no la de notificación).',
       'El número del comparendo, si lo tienes a la mano.',
@@ -51,9 +51,32 @@ Ley 1755 de 2015):
 2. Que se actualice mi registro ante el SIMIT y el RUNT en consecuencia, retirando cualquier
    bloqueo asociado a esta obligación.
 
+3. Que, en caso de que esa entidad considere que la acción de cobro NO se encuentra
+   prescrita, me informe de manera detallada y verificable el cómputo del término de
+   prescripción con base en las fechas que reposan en el expediente, indicando como mínimo:
+   a) La fecha de inicio del término y el acto o hecho que la origina.
+   b) Cada actuación que, a juicio de la entidad, interrumpió el término (por ejemplo, un
+      mandamiento de pago), con su fecha de expedición, su fecha de notificación, el medio por
+      el cual se me notificó y la pieza del expediente que lo acredita.
+   c) Cada período de suspensión que pretenda aplicar, si lo hay: la norma que lo decretó, su
+      fecha exacta de inicio y de terminación, por qué aplica a este término en particular y la
+      cantidad de días que adiciona.
+   d) Las normas aplicables a cada interrupción o suspensión.
+   e) El cálculo completo resultante y la fecha exacta hasta la cual considera vigente la acción
+      de cobro.
+   f) Copia de las piezas del expediente que soportan cada una de esas fechas, en especial las
+      constancias de notificación. Si ninguna pieza acredita alguna de ellas, solicito que así se
+      manifieste expresamente.
+
 Sustento esta solicitud en que, desde la fecha de la infracción ([FECHA]) hasta la fecha de este
 escrito, han transcurrido más de tres (3) años sin que se me haya notificado válidamente un
 mandamiento de pago que interrumpiera dicho término.
+
+Dejo constancia de que una respuesta que se limite a afirmar que la obligación "se encuentra
+vigente", o que invoque de forma genérica suspensiones de términos (por ejemplo, decretos expedidos
+durante la pandemia) o trámites internos, sin presentar el cómputo anterior con sus fechas, normas
+y soportes, no constituye una respuesta de fondo, clara y congruente con lo pedido, en los
+términos del artículo 23 de la Constitución Política y de la Ley 1755 de 2015.
 
 Solicito respuesta dentro de los términos de ley, enviada a: [DIRECCIÓN FÍSICA Y/O CORREO
 ELECTRÓNICO].
@@ -76,7 +99,7 @@ C.C. [NÚMERO]`,
     summary:
       'Para cuando ya te notificaron un mandamiento de pago, pero entre eso y hoy han pasado tantos años que, aun con la interrupción, la prescripción ya operó.',
     whoFor:
-      'Úsala si ya existe un proceso de cobro coactivo en tu contra (te notificaron un mandamiento de pago) pero, contando desde la notificación de ese mandamiento, también han pasado más de 3 años sin ninguna otra actuación válida — o si, en general, desde la infracción original ya pasaron más de 6 años. El mandamiento de pago interrumpe la prescripción una sola vez (art. 818 Estatuto Tributario): el conteo se reinicia desde el día siguiente a su notificación, pero si desde ahí también pasaron 3 años más sin novedad, prescribe otra vez — y esta vez para terminar el proceso.',
+      'Úsala si ya existe un proceso de cobro coactivo en tu contra (te notificaron un mandamiento de pago) pero, contando desde la notificación de ese mandamiento, también han pasado más de 3 años sin ninguna otra actuación válida — o si, en general, desde la infracción original ya pasaron más de 6 años. El mandamiento de pago interrumpe la prescripción una sola vez (art. 818 Estatuto Tributario): el conteo se reinicia desde el día siguiente a su notificación, pero si desde ahí también pasaron 3 años más sin novedad, prescribe otra vez — y esta vez para terminar el proceso. Igual que la plantilla de prescripción simple, incluye la petición de que, si la entidad sostiene que la deuda sigue vigente, presente el cómputo completo con fechas, actuaciones, normas y soportes.',
     requisitos: [
       'Fecha de la infracción original.',
       'Fecha en que te notificaron el mandamiento de pago (revísala en el SIMIT o en la propia notificación).',
@@ -109,6 +132,23 @@ día [FECHA DE LA INFRACCIÓN], para solicitar:
 
 4. Que se actualice mi registro ante el SIMIT y el RUNT, retirando el bloqueo asociado.
 
+5. Que, en caso de que esa entidad considere que la acción de cobro NO se encuentra
+   prescrita, me informe de manera detallada y verificable el cómputo del término de
+   prescripción con base en las fechas que reposan en el expediente, indicando como mínimo:
+   a) La fecha de inicio del término y el acto o hecho que la origina.
+   b) Cada actuación que, a juicio de la entidad, interrumpió el término (por ejemplo, un
+      mandamiento de pago), con su fecha de expedición, su fecha de notificación, el medio por
+      el cual se me notificó y la pieza del expediente que lo acredita.
+   c) Cada período de suspensión que pretenda aplicar, si lo hay: la norma que lo decretó, su
+      fecha exacta de inicio y de terminación, por qué aplica a este término en particular y la
+      cantidad de días que adiciona.
+   d) Las normas aplicables a cada interrupción o suspensión.
+   e) El cálculo completo resultante y la fecha exacta hasta la cual considera vigente la acción
+      de cobro.
+   f) Copia de las piezas del expediente que soportan cada una de esas fechas, en especial las
+      constancias de notificación. Si ninguna pieza acredita alguna de ellas, solicito que así se
+      manifieste expresamente.
+
 Sustento esta solicitud en los siguientes hechos: la infracción ocurrió el día [FECHA DE LA
 INFRACCIÓN]. El mandamiento de pago me fue notificado el día [FECHA DE NOTIFICACIÓN DEL
 MANDAMIENTO], fecha desde la cual, según el artículo 818 del Estatuto Tributario, el término de
@@ -119,6 +159,12 @@ actuación dentro del proceso que vuelva a interrumpir dicho término.
 En consecuencia, incluso tomando como punto de partida la notificación del mandamiento de pago
 —y no la fecha original de la infracción, que es aún más antigua—, la acción de cobro se
 encuentra prescrita.
+
+Dejo constancia de que una respuesta que se limite a afirmar que la obligación "se encuentra
+vigente", o que invoque de forma genérica suspensiones de términos (por ejemplo, decretos expedidos
+durante la pandemia) o trámites internos, sin presentar el cómputo anterior con sus fechas, normas
+y soportes, no constituye una respuesta de fondo, clara y congruente con lo pedido, en los
+términos del artículo 23 de la Constitución Política y de la Ley 1755 de 2015.
 
 Solicito respuesta dentro de los términos de ley, enviada a: [DIRECCIÓN FÍSICA Y/O CORREO
 ELECTRÓNICO].
@@ -171,6 +217,13 @@ día [FECHA, si la sabes], incluyendo específicamente:
 5. Si el comparendo proviene de un sistema de detección electrónica (fotomulta), copia del
    certificado de calibración del equipo vigente a la fecha de los hechos, y del registro de
    señalización previa instalada en el punto.
+6. Si esa entidad considera que la obligación se encuentra vigente (es decir, que no ha operado
+   la prescripción de la acción de cobro ni la caducidad de la facultad sancionatoria), el
+   cómputo detallado de esos términos con base en las fechas del expediente: la fecha de inicio
+   de cada término, cada actuación que a su juicio lo interrumpió (con fecha de expedición,
+   fecha y medio de notificación), cada período de suspensión que pretenda aplicar (norma, fecha
+   de inicio y de terminación, días que adiciona), las normas aplicables, el cálculo completo y
+   la fecha exacta hasta la cual considera vigente cada término.
 
 Fundamento esta solicitud en el artículo 5 del CPACA, que reconoce el derecho de toda persona a
 conocer el estado de cualquier actuación que la afecte y a obtener copias de los documentos que
@@ -230,7 +283,9 @@ HECHOS
    [Si hubo respuesta evasiva, usa este párrafo en su lugar:] El día [FECHA DE LA RESPUESTA]
    recibí respuesta de la entidad, la cual no resuelve de fondo lo solicitado, por cuanto
    [EXPLICA CON CLARIDAD: por ejemplo, no se pronuncia sobre lo pedido, es una fórmula genérica
-   que no se refiere a los hechos de mi caso, o no adjunta los documentos solicitados].
+   que no se refiere a los hechos de mi caso, no adjunta los documentos solicitados, o se limita
+   a afirmar que la obligación "sigue vigente" sin presentar el cómputo del término con fechas,
+   actuaciones y normas que le pedí expresamente].
 
 3. [Opcional, bórralo si no aplica:] El día [FECHA], reiteré la petición señalando expresamente
    lo anterior, sin obtener a la fecha una respuesta de fondo.

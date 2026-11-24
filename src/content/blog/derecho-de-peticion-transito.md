@@ -3,7 +3,7 @@ title: "Derecho de petición ante un organismo de tránsito: qué es y cómo usa
 description: "El derecho de petición es gratuito, no necesita abogado, y sirve para pedir desde un certificado de calibración hasta la declaratoria de prescripción de tu multa."
 category: "Trámites"
 order: 5
-updatedDate: 2026-07-17
+updatedDate: 2026-11-24
 ---
 
 Si hay una herramienta legal que deberías conocer antes de pagar cualquier multa de tránsito, es el **derecho de petición**. Es **gratuita**, **no necesitas abogado** para presentarla, y es la puerta de entrada a **casi todos los argumentos de defensa** que existen contra un comparendo.
@@ -45,6 +45,21 @@ Para que sea válida, una petición formal debe tener como mínimo:
 4. Las razones de tu solicitud (los hechos y el fundamento legal).
 5. Los documentos que adjuntas (pantallazo del SIMIT, cédula, poder si alguien más te representa).
 6. Tu firma, si es posible.
+
+## La petición que más destraba los casos de prescripción
+
+Si estás pidiendo que declaren prescrita tu multa, no te quedes solo con "solicito la prescripción". Agrega una **petición subsidiaria**: que, **si la secretaría considera que la multa no ha prescrito, te explique con sus propias fechas por qué**. En concreto, pídele que indique:
+
+- Desde qué fecha cuenta el término, y por qué.
+- Qué actuaciones, según ella, **interrumpieron** el término (por ejemplo, un mandamiento de pago), con la fecha en que se expidieron y la fecha y el medio en que **te las notificaron**.
+- Si alega **suspensiones** de términos (por ejemplo, decretos de la pandemia): qué norma, desde y hasta qué fecha, y cuántos días le suma al término.
+- La norma en que se apoya cada interrupción.
+- La fecha exacta hasta la cual, según ese cálculo, considera vigente el cobro.
+- Copia de los documentos que soportan cada fecha y, si alguno no existe en el expediente, que lo diga expresamente.
+
+¿Por qué funciona? Porque le pasa la carga a la autoridad. Ya no tienes que adivinar qué hay en el expediente: son ellos quienes tienen que mostrar sus fechas y hacer la cuenta. Si una notificación no existe, si una fecha no cuadra, o si incluso con sus propias fechas el término ya venció, queda en evidencia. Y si responden solo "la obligación se encuentra vigente", sin ese cálculo, esa respuesta **no resuelve de fondo** lo que pediste, y eso te abre la puerta a la tutela.
+
+Nuestras [plantillas de prescripción](/plantillas/) ya traen esta petición incluida, y el [prompt de análisis con IA](/analiza-tu-multa/) también la agrega siempre.
 
 ## Qué significa que te "respondan de fondo"
 
